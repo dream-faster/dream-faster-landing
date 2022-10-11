@@ -1,5 +1,3 @@
-import { useRouter } from 'next/router';
-
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
@@ -8,7 +6,7 @@ const SolidLine = () => (
 );
 
 const DashedLine = () => (
-  <div className="border-w-2 h-screen border-r border-dashed border-amber-400 opacity-30" />
+  <div className="h-screen border-r border-dashed border-amber-400 opacity-30" />
 );
 
 const Background = () => (
@@ -23,7 +21,7 @@ const Background = () => (
 );
 
 const Index = () => {
-  const router = useRouter();
+  // const router = useRouter();
 
   return (
     <Main
