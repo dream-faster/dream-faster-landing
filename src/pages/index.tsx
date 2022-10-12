@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router';
+
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
@@ -10,7 +12,7 @@ const DashedLine = () => (
 );
 
 const Background = () => (
-  <div className="pointer-events-none absolute inset-y-0 left-0 flex h-screen w-screen flex-row justify-evenly">
+  <div className="pointer-events-none absolute inset-y-0 left-0 grid h-screen w-screen grid-cols-1  justify-evenly p-8 md:grid-cols-6">
     <SolidLine />
 
     <DashedLine />
@@ -22,30 +24,40 @@ const Background = () => (
 );
 
 type ProjectProps = {
-  title: String;
-  subtitle: String;
+  title: string;
+  subtitle: string;
+  url: string;
 };
 
 const Plus = () => (
-  <div className="flex h-8 w-8 items-center justify-center">
+  <div className=" m-0 flex h-8 w-8 items-center justify-center p-0">
     <div className="relative h-[3px] w-1/2 bg-black" />
     <div className="relative ml-[-29.7%] h-1/2 w-[3px] rounded bg-black" />
   </div>
 );
 
 const ProjectButton = (props: ProjectProps) => {
-  const { title, subtitle } = props;
+  const { title, subtitle, url } = props;
+  const router = useRouter();
 
   return (
-    <div className="my-2 flex w-full flex-row justify-between">
-      <div className="ml-[-20px] flex items-center justify-center">
+    <div className="mx-[-17px] my-2 flex w-[calc(100%+17px)] flex-row justify-between">
+      <div className=" flex items-center justify-center">
         <Plus />
         <div className="m-0 flex h-full flex-col justify-center p-6 ">
           <h1 className="font-mono text-sm font-bold text-black"> {title} </h1>
           <h2 className="font-mono text-sm text-black "> {subtitle} </h2>
         </div>
       </div>
-      <div> GL </div>
+      <a
+        href={url}
+        className=" m-0 flex h-8 w-8 items-center justify-center p-0"
+      >
+        <img
+          src={`${router.basePath}/assets/images/github.svg`}
+          alt="Nextjs starter banner"
+        />
+      </a>
     </div>
   );
 };
@@ -66,18 +78,22 @@ const Index = () => {
         <Background />
         <div className="h-20 w-screen bg-white" />
         <div className="flex h-full w-screen items-start justify-center">
-          <div className="flex w-2/6 flex-col items-center justify-center">
+          <div className="flex w-full flex-col items-center justify-center md:w-2/6">
+            {/* <div className="grid grid-cols-1 md:grid-cols-6"> */}
             <ProjectButton
               title="Modular Pipelines"
               subtitle="Create complex ML pipelines"
+              url="https://github.com/applied-exploration/modular-pipelines"
             />
             <ProjectButton
               title="Drift"
               subtitle="Financial Market Prediction"
+              url="https://github.com/applied-exploration/drift"
             />
             <ProjectButton
-              title="Modular Pipelines"
-              subtitle="Create complex ML pipelines"
+              title="Recommendation Engine"
+              subtitle="Graph Neural Networks"
+              url="https://github.com/applied-exploration/drift"
             />
           </div>
         </div>
