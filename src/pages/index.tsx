@@ -3,13 +3,13 @@ import { useRouter } from 'next/router';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
-const SolidLine = () => (
-  <div className="h-screen border-r border-solid border-yellow-300 opacity-30" />
-);
+// const SolidLine = () => (
+//   <div className="h-screen border-r border-solid border-yellow-300 opacity-30" />
+// );
 
-const DashedLine = () => (
-  <div className="hidden h-screen border-r border-dashed border-yellow-300 opacity-30 md:block" />
-);
+// const DashedLine = () => (
+//   <div className="hidden h-screen border-r border-dashed border-yellow-300 opacity-30 md:block" />
+// );
 
 const Background = () => (
   <div className="pointer-events-none absolute inset-y-0 left-0 grid h-screen w-screen grid-cols-1 place-items-center  px-6 md:grid-cols-6">
