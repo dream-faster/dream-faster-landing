@@ -4,24 +4,33 @@ import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
 const SolidLine = () => (
-  <div className="h-screen border-r border-solid border-amber-400 opacity-30" />
+  <div className="h-screen border-r border-solid border-yellow-300 opacity-30" />
 );
 
 const DashedLine = () => (
-  <div className="hidden h-screen border-r border-dashed border-amber-400 opacity-30 md:block" />
+  <div className="hidden h-screen border-r border-dashed border-yellow-300 opacity-30 md:block" />
 );
 
 const Background = () => (
-  <div className="pointer-events-none absolute inset-y-0 left-0 grid h-screen w-screen grid-cols-1  justify-evenly p-8 md:grid-cols-6">
-    <SolidLine />
-
-    <DashedLine />
-    <div />
-    <DashedLine />
-
-    <SolidLine />
+  <div className="pointer-events-none absolute inset-y-0 left-0 grid h-screen w-screen grid-cols-1 place-items-center  px-6 md:grid-cols-6">
+    <div className="hidden h-screen w-full border-r border-dashed border-yellow-300 opacity-30 md:block md:border-solid" />
+    <div className="hidden h-screen w-full md:block" />
+    <div className="h-screen w-full border-x border-solid border-yellow-300 opacity-30 md:col-span-2 md:border-dashed" />
+    <div className="hidden h-screen w-full md:block" />
+    <div className="hidden h-screen w-full border-l border-dashed border-yellow-300 opacity-30 md:block md:border-solid" />
   </div>
 );
+// const Background = () => (
+//   <div className="pointer-events-none absolute inset-y-0 left-0 grid h-screen w-screen grid-cols-3 place-items-center p-0  p-8 md:grid-cols-6 md:p-2">
+//     <SolidLine />
+
+//     <DashedLine />
+//     <div />
+//     <DashedLine />
+
+//     <SolidLine />
+//   </div>
+// );
 
 type ProjectProps = {
   title: string;
@@ -29,29 +38,48 @@ type ProjectProps = {
   url: string;
 };
 
+// const Plus = () => (
+//   <div className="m-0 flex h-[calc(2rem)] w-[calc(2rem)]  p-0">
+//     <div className="relative left-[calc((2rem/4))] top-[calc((2rem/2)-1px)] h-[3px] w-[calc(2rem/2)] bg-black" />
+//     <div className="relative left-[-1px] top-[calc(2rem/4)] h-[calc((2rem/2))] w-[3px] rounded bg-black" />
+//   </div>
+// );
 const Plus = () => (
-  <div className=" m-0 flex h-8 w-8 items-center justify-center p-0">
-    <div className="relative h-[3px] w-1/2 bg-black" />
-    <div className="relative ml-[-29.7%] h-1/2 w-[3px] rounded bg-black" />
+  <div className="m-0 flex  flex-none flex-col justify-center p-1 group-hover:bg-yellow-400">
+    <div className="m-0 h-[calc(1rem+1px)] w-[calc(1rem+1px)] flex-none p-0">
+      <div className="relative top-[calc(0.5rem-1px)] left-0  m-0 h-[3px] w-full bg-black p-0 group-hover:bg-white" />
+      <div className="relative  left-[calc(0.5rem-1px)] top-[-3px] m-0 h-full w-[3px] bg-black p-0 group-hover:bg-white" />
+    </div>
   </div>
 );
+// const Plus = () => (
+//   <div className="m-0 flex h-[calc(2rem-1px)] w-[calc(2rem-1px)]  p-0">
+//     <div className="relative left-[calc((2rem/4)-1px)] top-[calc((2rem/2)-2px)] h-[3px] w-[calc(2rem/2+1px)] bg-black" />
+//     <div className="relative left-[-3px] top-[calc(2rem/4-1px)] h-[calc((2rem/2)+1px)] w-[3px] rounded bg-black" />
+//   </div>
+// );
 
 const ProjectButton = (props: ProjectProps) => {
   const { title, subtitle, url } = props;
   const router = useRouter();
 
   return (
-    <div className="mx-[-17px] my-2 flex w-[calc(100%+17px)] flex-row justify-between">
-      <div className=" flex items-center justify-center">
+    <div className="my-2 ml-2 flex w-full flex-row items-center justify-between md:mx-[-16px] md:w-[calc(100%+16px)] md:px-0">
+      <div className=" group flex w-full items-start justify-center">
         <Plus />
-        <div className="m-0 flex h-full flex-col justify-center p-6 ">
-          <h1 className="font-mono text-sm font-bold text-black"> {title} </h1>
-          <h2 className="font-mono text-sm text-black "> {subtitle} </h2>
+        <div className="m-0 flex h-full w-full flex-col justify-center px-6">
+          <div className="flex h-full items-center py-1  group-hover:bg-yellow-400">
+            <h1 className="flex h-[calc(1rem+1px)] w-full items-center pl-4 align-middle font-mono text-[calc(1rem+1px)] font-bold text-black ">
+              {' '}
+              {title}
+            </h1>
+          </div>
+          <h2 className="pl-4 font-mono text-sm text-black"> {subtitle} </h2>
         </div>
       </div>
       <a
         href={url}
-        className=" m-0 flex h-8 w-8 items-center justify-center p-0"
+        className=" m-0 flex h-[calc(1rem+1px)] w-[calc(1rem+1px)] items-center justify-center p-0"
       >
         <img
           src={`${router.basePath}/assets/images/github.svg`}
