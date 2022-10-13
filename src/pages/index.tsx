@@ -13,11 +13,11 @@ import { Main } from '@/templates/Main';
 
 const Background = () => (
   <div className="pointer-events-none absolute inset-y-0 left-0 grid h-screen w-screen grid-cols-1 place-items-center  px-6 md:grid-cols-6">
-    <div className="hidden h-screen w-full border-r border-dashed border-yellow-300 opacity-30 md:block md:border-solid" />
+    <div className="hidden h-screen w-full border-r border-dashed border-yellow-300 opacity-100 md:block md:border-solid" />
     <div className="hidden h-screen w-full md:block" />
-    <div className="h-screen w-full border-x border-solid border-yellow-300 opacity-30 md:col-span-2 md:border-dashed" />
+    <div className="h-screen w-full border-x border-solid border-yellow-300 opacity-100 md:col-span-2 md:border-dashed" />
     <div className="hidden h-screen w-full md:block" />
-    <div className="hidden h-screen w-full border-l border-dashed border-yellow-300 opacity-30 md:block md:border-solid" />
+    <div className="hidden h-screen w-full border-l border-dashed border-yellow-300 opacity-100 md:block md:border-solid" />
   </div>
 );
 // const Background = () => (
@@ -48,7 +48,7 @@ const Plus = () => (
   <div className="m-0 flex  flex-none flex-col justify-center p-1 group-hover:bg-yellow-400">
     <div className="m-0 h-[calc(1rem+1px)] w-[calc(1rem+1px)] flex-none p-0">
       <div className="relative top-[calc(0.5rem-1px)] left-0  m-0 h-[3px] w-full bg-black p-0 group-hover:bg-white" />
-      <div className="relative  left-[calc(0.5rem-1px)] top-[-3px] m-0 h-full w-[3px] bg-black p-0 group-hover:bg-white" />
+      <div className="relative  left-[calc(0.5rem-1px)] top-[-3px] m-0 h-full w-[3px] rounded bg-black p-0 group-hover:bg-white" />
     </div>
   </div>
 );
