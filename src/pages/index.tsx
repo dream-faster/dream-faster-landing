@@ -97,8 +97,8 @@ const Index = () => {
     <Main
       meta={
         <Meta
-          title="Next.js Boilerplate Presentation"
-          description="Next js Boilerplate is the perfect starter code for your project. Build your React application with the Next.js framework."
+          title="Dream Faster AI Studio"
+          description="Independent R&D studio specialized in Artificial Intelligence."
         />
       }
     >
