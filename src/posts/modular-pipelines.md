@@ -1,13 +1,12 @@
 ---
 title: "Modular Pipelines"
-date: "2020-01-01"
+date: "2022-09-10"
 github_link: "https://github.com/applied-exploration/modular-pipelines"
 description: "Create complex pipelines fast. Stack, Ensemble or create multi-objective optimization."
 ---
 
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
+Modular Pipelines is a lightweight and extensible library to create complex multi-model and multi-modal pipelines.
 
-- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
-- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
+**Ensemble Learning** → Ensemble learning is a general meta approach to machine learning that seeks better predictive performance by combining the predictions from multiple models. See more on wikipedia Wiki - Ensemble Learning or A Gentle Introduction to Ensemble Learning Algorithms
 
-Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
+**Meta Learning** → in machine learning refers to learning algorithms that learn from other learning algorithms. Most commonly, this means the use of machine learning algorithms that learn how to best combine the predictions from other machine learning algorithms in the field of ensemble learning. Meta Modelling and What Is Meta-Learning in Machine Learning?

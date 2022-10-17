@@ -9,14 +9,15 @@ import { Main } from '../../templates/Main.tsx';
 
 export default function Post({ postData }) {
   return (
-    <Main>
-      {postData.title}
-      <br />
-      {postData.id}
-      <br />
-      {postData.date}
-      <br />
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+    <Main wide={true}>
+      <div className="grid h-screen w-screen grid-cols-1 place-items-start p-5 pt-0 md:grid-cols-8 md:p-0">
+        <div />
+        <article className="prose prose-zinc dark:prose-invert w-full"></article>
+        <article className="prose prose-zinc dark:prose-invert w-full md:col-span-4 p-4">
+          <h3> {postData.title} </h3>
+          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        </article>
+      </div>
     </Main>
   );
 }

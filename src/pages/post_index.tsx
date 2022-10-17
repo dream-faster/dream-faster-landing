@@ -3,7 +3,7 @@ import ProjectButton from '@/components/ProjectButton';
 const OneSection = ({ allPostsData }) => (
   // <div className="flex h-full w-screen flex-col justify-center md:w-2/6">
 
-  <div className="mt-6 flex h-full flex-col items-center justify-start bg-neutral-100">
+  <div className="flex h-full flex-col items-center justify-start bg-neutral-100 py-8">
     <p className="flex w-full justify-start pl-9 font-mono text-xs tracking-widest md:w-2/6">
       {' '}
       PROJECTS{' '}
