@@ -1,8 +1,8 @@
 import Background from '@/components/Background';
 import { Meta } from '@/layouts/Meta';
+import { getSortedPostsData } from '@/lib/posts';
 import { Main } from '@/templates/Main';
 
-import { getSortedPostsData } from '../lib/posts';
 import OneSection from './post_index';
 
 const Menu = () => (
