@@ -17,7 +17,7 @@ const ProjectButton = ({
   const router = useRouter();
 
   return (
-    <div className="group my-2 mb-8 flex w-[calc(100%+25px)] flex-row items-center justify-between p-5 md:p-0">
+    <div className="group my-2 mb-8 flex w-[calc(100%+24px)] flex-row items-center justify-between p-5 md:p-0">
       <a
         href={linkto}
         className="  flex w-full items-start justify-center hover:border-none "

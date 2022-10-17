@@ -4,7 +4,7 @@ const OneSection = ({ allPostsData }) => (
   // <div className="flex h-full w-screen flex-col justify-center md:w-2/6">
 
   <div className="mt-6 flex h-full flex-col items-center justify-start bg-neutral-100">
-    <p className="flex w-full justify-start pl-6 font-mono text-xs tracking-widest md:w-2/6">
+    <p className="flex w-full justify-start pl-9 font-mono text-xs tracking-widest md:w-2/6">
       {' '}
       PROJECTS{' '}
     </p>

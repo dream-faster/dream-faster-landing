@@ -17,7 +17,7 @@ const Menu = () => (
               Dream Faster
             </h1>
           </div>
-          <h2 className="self-end whitespace-nowrap text-right font-mono text-[calc(1rem+1px)] font-black text-black">
+          <h2 className="self-end whitespace-nowrap pr-2 text-right font-mono text-sm  text-black">
             Studio
           </h2>
         </div>
