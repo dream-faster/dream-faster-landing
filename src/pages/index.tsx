@@ -1,79 +1,31 @@
-import { useRouter } from 'next/router';
-
+import Background from '@/components/Background';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
 import { getSortedPostsData } from '../lib/posts';
+import OneSection from './post_index';
 
-const Background = () => (
-  <div className="pointer-events-none absolute inset-y-0 left-0 grid h-screen w-screen grid-cols-1 place-items-center p-5 md:grid-cols-6 md:p-0">
-    <div className="hidden h-screen w-full border-r border-dashed border-yellow-300 opacity-100 md:block md:border-solid" />
-    <div className="hidden h-screen w-full md:block" />
-    <div className="h-screen w-full border-x border-solid border-yellow-300 opacity-100 md:col-span-2 md:border-dashed" />
-    <div className="hidden h-screen w-full md:block" />
-    <div className="hidden h-screen w-full border-l border-dashed border-yellow-300 opacity-100 md:block md:border-solid" />
-  </div>
-);
-
-type ProjectProps = {
-  title: string;
-  subtitle: string;
-  url: string;
-  linkto: string;
-};
-
-const Plus = () => (
-  <div className="m-0 flex  flex-none flex-col justify-center p-1 group-hover:bg-yellow-400">
-    <div className="m-0 h-[calc(1rem+1px)] w-[calc(1rem+1px)] flex-none p-0">
-      <div className="relative top-[calc(0.5rem-1px)] left-0  m-0 h-[3px] w-full bg-black p-0 group-hover:bg-white" />
-      <div className="relative  left-[calc(0.5rem-1px)] top-[-3px] m-0 h-full w-[3px] rounded bg-black p-0 group-hover:bg-white" />
-    </div>
-  </div>
-);
-
-const GitHub = ({ url, imgSource }: { url: string; imgSource: string }) => (
-  <a
-    href={url}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="m-0 flex  flex-none items-start justify-center self-start p-1  hover:border-none"
-  >
-    <img
-      src={imgSource}
-      alt="Nextjs starter banner"
-      className="h-[calc(1rem+1px)] w-[calc(1rem+1px)] fill-white"
-    />
-  </a>
-);
-
-const ProjectButton = (props: ProjectProps) => {
-  const { title, subtitle, url, linkto } = props;
-  const router = useRouter();
-
-  return (
-    <div className="my-2 flex w-[calc(100%+25px)] flex-row items-center justify-between p-5 md:p-0">
-      <a
-        href={linkto}
-        className=" group flex w-full items-start justify-center hover:border-none "
-      >
-        <Plus />
-        <div className="m-0 flex h-full w-full flex-col justify-center pl-6">
-          <div className="flex h-full items-start py-1  group-hover:bg-yellow-400">
-            <h1 className="flex h-[calc(1rem+1px)] w-full items-center pl-4 align-middle font-mono text-[calc(1rem+1px)] font-bold text-black ">
-              {' '}
-              {title}
+const Menu = () => (
+  <div className="   left-0 grid h-28  w-screen grid-cols-1 place-items-center   md:grid-cols-6 md:p-0">
+    <div />
+    <div className="flex h-[calc(1rem+9px)] w-[calc(100%+5px)] items-center justify-center">
+      <div className="flex h-full w-full items-start justify-start">
+        <div className="h-full w-1 flex-none bg-yellow-400 " />
+        <div className="mx-1  flex w-full flex-col ">
+          <div className="flex w-full items-center justify-end bg-yellow-400 px-2">
+            <h1 className="self-end whitespace-nowrap  text-right font-mono text-[calc(1rem+1px)] font-black text-black">
+              Dream Faster
             </h1>
           </div>
-          <h2 className="pl-4 font-mono text-sm text-black"> {subtitle} </h2>
+          <h2 className="self-end whitespace-nowrap text-right font-mono text-[calc(1rem+1px)] font-black text-black">
+            Studio
+          </h2>
         </div>
-      </a>
-      <GitHub
-        url={url}
-        imgSource={`${router.basePath}/assets/images/github.svg`}
-      />
+        <div className="h-full w-1 flex-none bg-yellow-400" />
+      </div>
     </div>
-  );
-};
+  </div>
+);
 
 export default function Index({ allPostsData }) {
   // const router = useRouter();
@@ -87,22 +39,10 @@ export default function Index({ allPostsData }) {
         />
       }
     >
-      <div className="absolute inset-y-0 left-0 flex h-screen w-screen flex-col  bg-neutral-100">
+      <div className="absolute inset-y-0 left-0 flex h-screen w-screen flex-col  ">
         <Background />
-        <div className="h-20 w-screen bg-white" />
-        <div className="flex h-full w-screen items-start justify-center">
-          <div className="flex w-full flex-col items-center justify-center md:w-2/6">
-            {allPostsData.map(({ id, date, title, description }) => (
-              <ProjectButton
-                key={id}
-                title={title}
-                subtitle={description}
-                url="https://github.com/applied-exploration/modular-pipelines"
-                linkto={`/posts/${id}`}
-              />
-            ))}
-          </div>
-        </div>
+        <Menu />
+        <OneSection allPostsData={allPostsData} />
       </div>
     </Main>
   );
