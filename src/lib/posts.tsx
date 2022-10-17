@@ -20,26 +20,26 @@ export function getSortedPostsData() {
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
 
-    const {
-      title,
-      date,
-      github_link,
-      description,
-    }: {
-      title: string;
-      date: string;
-      github_link: string;
-      description: string;
-    } = matterResult.data;
+    // const {
+    //   title,
+    //   date,
+    //   github_link,
+    //   description,
+    // }: {
+    //   title: string;
+    //   date: string;
+    //   github_link: string;
+    //   description: string;
+    // } = matterResult.data;
 
     // Combine the data with the id
     return {
       id,
-      title,
-      date,
-      github_link,
-      description,
-      // ...matterResult.data,
+      // title,
+      // date,
+      // github_link,
+      // description,
+      ...matterResult.data,
     };
   });
 
