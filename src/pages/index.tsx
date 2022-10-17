@@ -27,7 +27,11 @@ const Menu = () => (
   </div>
 );
 
-export default function Index({ allPostsData }) {
+export default function Index({
+  allPostsData,
+}: {
+  allPostsData: [string, string, string, string];
+}) {
   // const router = useRouter();
 
   return (

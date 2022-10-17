@@ -3,15 +3,13 @@ const GitHub = ({ url, imgSource }: { url: string; imgSource: string }) => (
     href={url}
     target="_blank"
     rel="noopener noreferrer"
-    className=" m-0 flex flex-none items-start justify-center self-start p-1 hover:border hover:border-yellow-400 hover:bg-yellow-400 hover:fill-white group-hover:border group-hover:border-yellow-400 group-hover:p-[3px]"
+    className=" z-10 m-0 flex flex-none items-start justify-center self-start bg-neutral-100 p-1 hover:border hover:border-yellow-400 hover:bg-yellow-400 hover:!fill-white group-hover:border group-hover:border-yellow-400 group-hover:fill-yellow-400 group-hover:p-[3px]"
     onPointerOver={(e) => e.stopPropagation()}
   >
     <svg
       width="19"
       height="19"
       viewBox="0 0 19 19"
-      // fill="none"
-      // fill="inherit"
       xmlns="http://www.w3.org/2000/svg"
       className="h-[calc(1rem+1px)] w-[calc(1rem+1px)] fill-inherit"
     >
