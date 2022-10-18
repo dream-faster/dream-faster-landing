@@ -1,6 +1,6 @@
 import ProjectButton from '@/components/ProjectButton';
 
-const OneSection = ({ allPostsData }) => (
+const OneSection = ({ allPostsData }: { allPostsData: Array<any> }) => (
   // <div className="flex h-full w-screen flex-col justify-center md:w-2/6">
 
   <div className="flex h-full flex-col items-center justify-start bg-neutral-100 py-8">
