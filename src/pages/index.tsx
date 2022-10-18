@@ -2,7 +2,7 @@ import { Meta } from '@/layouts/Meta';
 import { getSortedPostsData } from '@/lib/projects';
 import { Main } from '@/templates/Main';
 
-import OneSection from './post_index';
+import OneSection from '../components/OneSection';
 
 export default function Index({
   allPostsData,
