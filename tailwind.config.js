@@ -45,7 +45,8 @@ module.exports = {
     },
   },
   plugins: [
-    import('@tailwindcss/typography'),
+    // eslint-disable-next-line global-require
+    require('@tailwindcss/typography'),
     // ...
   ],
 };
