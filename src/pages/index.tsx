@@ -20,7 +20,7 @@ export default function Index({
         />
       }
     >
-      <OneSection allPostsData={allPostsData} />
+      <OneSection wide={true} allPostsData={allPostsData} />
     </Main>
   );
 }
