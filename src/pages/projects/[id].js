@@ -1,10 +1,7 @@
 import { getAllPostIds, getPostData } from '@/lib/projects';
-import { useRouter } from 'next/router';
 import { Article } from '../../templates/Article.tsx';
 
 export default function Post({ postData }) {
-  const router = useRouter();
-
   return (
     <Article>
       <article className="prose prose-zinc  w-full">
