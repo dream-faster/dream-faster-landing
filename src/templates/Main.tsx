@@ -6,6 +6,7 @@ import Menu from '@/components/Menu';
 type IMainProps = {
   meta: ReactNode;
   children: ReactNode;
+  wide: boolean;
 };
 
 const Main = (props: IMainProps) => (
