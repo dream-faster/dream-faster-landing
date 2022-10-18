@@ -1,4 +1,4 @@
-import { getAllPostIds, getPostData } from '@/lib/posts';
+import { getAllPostIds, getPostData } from '@/lib/projects';
 
 import { Main } from '../../templates/Main.tsx';
 

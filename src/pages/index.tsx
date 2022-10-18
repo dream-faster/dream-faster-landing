@@ -1,5 +1,5 @@
 import { Meta } from '@/layouts/Meta';
-import { getSortedPostsData } from '@/lib/posts';
+import { getSortedPostsData } from '@/lib/projects';
 import { Main } from '@/templates/Main';
 
 import OneSection from './post_index';

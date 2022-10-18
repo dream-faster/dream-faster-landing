@@ -16,7 +16,7 @@ const OneSection = ({ allPostsData }) => (
           subtitle={description}
           date={date}
           url="https://github.com/applied-exploration/modular-pipelines"
-          linkto={`/posts/${id}`}
+          linkto={`/projects/${id}`}
         />
       ))}
     </div>
