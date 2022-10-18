@@ -9,7 +9,7 @@ const OneSection = ({
 }) => (
   // <div className="flex h-full w-screen flex-col justify-center md:w-2/6">
 
-  <div className="flex h-full flex-col items-center justify-start bg-neutral-100 py-8">
+  <div className="flex h-full min-h-screen flex-col items-center justify-start bg-neutral-100 py-10">
     <p
       className={`md: flex w-full justify-start pl-9 font-mono text-xs tracking-widest ${
         wide ? 'md:w-1/2' : 'md:w-2/6'

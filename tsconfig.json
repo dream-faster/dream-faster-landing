@@ -48,5 +48,10 @@
     "./tailwind.config.js",
     "tailwind.config.js"
   ],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/components/Breadcrumb.jsx"
+  ]
 }

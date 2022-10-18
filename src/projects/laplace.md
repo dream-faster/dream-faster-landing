@@ -16,7 +16,7 @@ The pipeline is designed for self-supervised edge prediction on heterogenous gra
 
 <br>
 
-![Pipeline Overview](/docs/assets/pipeline_overview.png)
+![Pipeline Overview](/assets/images/pipeline_overview.png)
 
 ### Features
 
