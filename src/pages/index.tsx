@@ -13,6 +13,7 @@ export default function Index({
 
   return (
     <Main
+      wide={false}
       meta={
         <Meta
           title="Dream Faster AI Studio"
@@ -20,9 +21,7 @@ export default function Index({
         />
       }
     >
-      {/* <div className="flex h-screen w-screen flex-col  "> */}
       <OneSection allPostsData={allPostsData} />
-      {/* </div> */}
     </Main>
   );
 }
