@@ -39,9 +39,9 @@ const Breadcrumbs = () => {
 
   return (
     <nav aria-label="breadcrumbs" className="w-full h-fit p-0 m-0">
-      <ol className="breadcrumb" className="flex flex-row p-0 m-0 justify-end">
+      <ol className="flex flex-row p-0 m-0 justify-end">
         <li className="list-none text-xs font-mono m-0 text-black">
-          <a href="/">HOME</a>
+          <Link href="/">HOME</Link>
         </li>
         {breadcrumbs.map((breadcrumb, i) => {
           return (
