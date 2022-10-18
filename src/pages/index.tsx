@@ -12,7 +12,7 @@ export default function Index({
 
   return (
     <Main
-      wide={false}
+      wide={true}
       meta={
         <Meta
           title="Dream Faster AI Studio"

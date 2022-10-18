@@ -1,13 +1,11 @@
 ---
-title: "Quantitive Analysis"
-date: "2020-01-01"
+title: "Drift - Quantitive Analysis"
+date: "2021-12-01"
 github_link: "https://github.com/applied-exploration/drift"
 description: "Quantative analysis without fooling yourself"
 ---
 
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
+# Drift - Quantitive Analysis
 
-- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
-- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
+And end-to-end pipeline to train predictive Machine Learning models on financial (non-stationary, regime changing) time series. Includes feature selection and meta labelling.
 
-Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
