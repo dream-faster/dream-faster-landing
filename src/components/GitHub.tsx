@@ -1,4 +1,4 @@
-const GitHub = ({ url, imgSource }: { url: string; imgSource: string }) => (
+const GitHub = ({ url }: { url: string }) => (
   <a
     href={url}
     target="_blank"

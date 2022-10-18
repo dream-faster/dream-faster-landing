@@ -8,18 +8,26 @@ const ProjectButton = ({
   subtitle,
   url,
   linkto,
+  date,
 }: {
   title: string;
   subtitle: string;
   url: string;
   linkto: string;
+  date: string;
 }) => {
   const router = useRouter();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    router.push(linkto);
+  };
 
   return (
     <div className="group my-2 mb-8 flex w-[calc(100%+24px)] flex-row items-center justify-between p-5 md:p-0">
       <a
         href={linkto}
+        onClick={handleClick}
         className="  flex w-full items-start justify-center hover:border-none "
       >
         <Plus />
@@ -34,11 +42,12 @@ const ProjectButton = ({
             {' '}
             {subtitle}{' '}
           </h2>
+          <p className="absolute hidden">{date}</p>
         </div>
       </a>
       <GitHub
         url={url}
-        imgSource={`${router.basePath}/assets/images/github.svg`}
+        // imgSource={`${router.basePath}/assets/images/github.svg`}
       />
     </div>
   );
