@@ -1,11 +1,6 @@
 import { getAllPostIds, getPostData } from '@/lib/posts';
 
-import dynamic from 'next/dynamic';
 import { Main } from '../../templates/Main.tsx';
-
-// const Main = dynamic(() => import('../../templates/Main.tsx'), {
-//   ssr: false,
-// });
 
 export default function Post({ postData }) {
   return (
