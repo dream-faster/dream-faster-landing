@@ -1,5 +1,5 @@
 ---
-title: "Laplace - Graph enhanced recommendation engine"
+title: "Laplace - Recommendation engine"
 date: "2022-07-01"
 github_link: "https://github.com/applied-exploration/laplace-gnn-recommendation"
 description: "Large scale recommendation leveraging Graph Neural Networks."

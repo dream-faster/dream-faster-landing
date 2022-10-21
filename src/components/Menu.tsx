@@ -1,13 +1,6 @@
 import Link from 'next/link';
 
-const MajorButton = ({ text, link }: { text: string; link: string }) => (
-  <Link href={link}>
-    <button className="mx-2 h-[calc(1rem+9px)]  w-fit border border-yellow-400 px-4 text-right text-black hover:bg-yellow-400 md:mr-0">
-      {' '}
-      {text} ⟶
-    </button>
-  </Link>
-);
+import { MajorButton } from '@/components/MajorButton';
 
 const Menu = ({ wide }: { wide: boolean }) => (
   <div
@@ -22,7 +15,7 @@ const Menu = ({ wide }: { wide: boolean }) => (
     >
       <button className="flex h-[calc(1rem+9px)] w-full  items-start justify-start ">
         <div className="h-full w-1 flex-none bg-yellow-400 " />
-        <div className="mx-1 flex h-full w-full flex-row  items-start md:flex-col md:items-end">
+        <div className="mx-1 flex h-full w-full  flex-row items-start md:items-end">
           <div className="flex w-full items-center justify-start bg-yellow-400 px-2  md:justify-end">
             <h1 className="self-end whitespace-nowrap  text-right font-mono text-[calc(1rem+1px)] font-black text-black">
               Dream Faster
@@ -37,8 +30,12 @@ const Menu = ({ wide }: { wide: boolean }) => (
     </Link>
     {/* <div className="col-span-1" /> */}
     <div className="col-span-4 mt-2 flex w-full flex-row justify-between self-start justify-self-start px-0 font-mono text-sm md:m-0 md:mr-2 md:flex md:h-full md:items-center md:justify-end md:justify-self-end">
-      <MajorButton text="Collaborate with us" link="/collaborate" />
-      <MajorButton text="Who are we" link="/about" />
+      <MajorButton
+        text="Collaborate with us"
+        link="/collaborate"
+        primary={false}
+      />
+      {/* <MajorButton text="Who are we" link="/about" primary={false} /> */}
     </div>
   </div>
 );
