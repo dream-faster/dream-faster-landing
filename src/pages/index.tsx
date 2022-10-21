@@ -1,7 +1,10 @@
-import OneSection from '@/components/OneSection';
+import { Footer } from '@/components/Footer';
+import { Hero } from '@/components/Hero';
+import ProjectsSection from '@/components/ProjectsSection';
 import { Meta } from '@/layouts/Meta';
 import { getSortedPostsData } from '@/lib/projects';
 import { Main } from '@/templates/Main';
+import OneSection from '@/templates/OneSection';
 
 export default function Index({
   allPostsData,
@@ -20,7 +23,16 @@ export default function Index({
         />
       }
     >
-      <OneSection wide={true} allPostsData={allPostsData} />
+      <OneSection>
+        <Hero />
+      </OneSection>
+      <OneSection title="projects">
+        <ProjectsSection allPostsData={allPostsData} />
+      </OneSection>
+      <div className="h-28" />
+      <OneSection background_full={true}>
+        <Footer />
+      </OneSection>
     </Main>
   );
 }
