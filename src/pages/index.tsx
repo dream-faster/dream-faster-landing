@@ -1,4 +1,5 @@
-import GitHub from '@/components/GitHub';
+import Link from 'next/link';
+
 import ProjectsSection from '@/components/ProjectsSection';
 import { Meta } from '@/layouts/Meta';
 import { getSortedPostsData } from '@/lib/projects';
@@ -41,14 +42,30 @@ export default function Index({
       <OneSection wide={true} title="projects">
         <ProjectsSection allPostsData={allPostsData} />
       </OneSection>
-      <OneSection className="bg-yellow-400" title="footer">
-        Berlin
-        <div>
-          {' '}
-          Code on GitHub{' '}
-          <GitHub url="https://github.com/applied-exploration/dream-faster-landing" />
+      <div className="h-28" />
+      <OneSection background_full={true} title="footer" wide={true}>
+        <div className="flex w-full items-start justify-between px-12 font-mono text-sm">
+          <div>
+            <p>Dream Faster AI </p>
+            <p>UG (haftungsbeschränkt) </p>
+            <p>Berlin </p>
+          </div>
+          <div className="flex flex-row items-center justify-center">
+            <Link
+              href="https://github.com/applied-exploration/dream-faster-landing"
+              className="px-2"
+            >
+              <a href="https://github.com/applied-exploration/dream-faster-landing">
+                {' '}
+                Code on GitHub{' '}
+              </a>
+            </Link>
+            {/* <GitHub
+              url="https://github.com/applied-exploration/dream-faster-landing"
+              background_full={true}
+            /> */}
+          </div>
         </div>
-        Code on Github
       </OneSection>
     </Main>
   );
