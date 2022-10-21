@@ -24,7 +24,7 @@ const ProjectButton = ({
   };
 
   return (
-    <div className="group my-2 mb-8 flex min-h-[5rem] w-screen flex-row items-start justify-between   md:w-[calc(100%+24px)] md:p-0">
+    <div className="group my-2 mb-8 flex min-h-[5rem] w-screen flex-row items-start justify-between px-2   md:w-[calc(100%+24px)] md:p-0">
       <a
         href={linkto}
         onClick={handleClick}

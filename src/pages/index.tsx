@@ -1,4 +1,5 @@
 import { Footer } from '@/components/Footer';
+import { Hero } from '@/components/Hero';
 import ProjectsSection from '@/components/ProjectsSection';
 import { Meta } from '@/layouts/Meta';
 import { getSortedPostsData } from '@/lib/projects';
@@ -23,20 +24,7 @@ export default function Index({
       }
     >
       <OneSection>
-        <p className="min-h-[50vh] px-12 font-mono text-sm text-black">
-          We are an independent Machine Learning Research and Development Studio
-          based in Berlin.
-          <br />
-          <br />
-          We love to:
-          <br />
-          &emsp;- make state of the art algorithms more convenient to access
-          <br />
-          &emsp;- explore if ML practices hold up to scrutiny
-          <br />
-          &emsp;- work with experts to develop useful tools and solutions to
-          real-world problems
-        </p>
+        <Hero />
       </OneSection>
       <OneSection title="projects">
         <ProjectsSection allPostsData={allPostsData} />

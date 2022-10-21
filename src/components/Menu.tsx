@@ -4,7 +4,7 @@ import { Logo } from './Logo';
 
 const Menu = ({ wide }: { wide: boolean }) => (
   <div
-    className={`left-0 z-20 flex h-20 w-screen flex-col place-items-center justify-center p-[19px]  md:grid  md:p-0 ${
+    className={`left-0 z-20 flex h-20 w-screen flex-col items-center p-[19px]  md:grid  md:p-0 ${
       wide ? 'md:grid-cols-8' : 'md:grid-cols-6'
     }`}
   >
@@ -18,7 +18,6 @@ const Menu = ({ wide }: { wide: boolean }) => (
         link="/collaborate"
         primary={false}
       />
-      {/* <MajorButton text="Who are we" link="/about" primary={false} /> */}
     </div>
   </div>
 );
