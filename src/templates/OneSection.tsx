@@ -2,21 +2,17 @@ import type { ReactNode } from 'react';
 
 const OneSection = ({
   children,
-  wide,
+  wide = true,
   title,
   background_full,
 }: {
   children: ReactNode;
-  wide: boolean;
-  title: string;
+  wide?: boolean;
+  title?: string;
   background_full?: boolean;
 }) => (
-  <div
-    className={`flex h-full flex-col items-center justify-center ${
-      background_full ? 'bg-yellow-400' : 'bg-neutral-100'
-    }`}
-  >
-    {background_full ? null : (
+  <div className={`mb-6 flex h-full flex-col items-center justify-center`}>
+    {title ? (
       <p
         className={`md: my-2 flex w-full justify-start pl-9 font-mono text-xs tracking-widest ${
           wide ? 'md:w-1/2' : 'md:w-2/6'
@@ -24,10 +20,10 @@ const OneSection = ({
       >
         {title.toUpperCase()}
       </p>
-    )}
+    ) : null}
     <div
       className={`flex w-full flex-col items-center justify-center ${
-        background_full ? 'bg-transparent' : 'bg-white'
+        background_full ? 'bg-yellow-400' : 'bg-white'
       } ${wide ? 'md:w-3/4' : 'md:w-2/6'}`}
     >
       <div

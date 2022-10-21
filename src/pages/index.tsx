@@ -1,5 +1,4 @@
-import Link from 'next/link';
-
+import { Footer } from '@/components/Footer';
 import ProjectsSection from '@/components/ProjectsSection';
 import { Meta } from '@/layouts/Meta';
 import { getSortedPostsData } from '@/lib/projects';
@@ -23,7 +22,7 @@ export default function Index({
         />
       }
     >
-      <OneSection wide={true} title="Intro">
+      <OneSection>
         <p className="min-h-[50vh] px-12 font-mono text-sm text-black">
           We are an independent Machine Learning Research and Development Studio
           based in Berlin.
@@ -39,33 +38,12 @@ export default function Index({
           real-world problems
         </p>
       </OneSection>
-      <OneSection wide={true} title="projects">
+      <OneSection title="projects">
         <ProjectsSection allPostsData={allPostsData} />
       </OneSection>
       <div className="h-28" />
-      <OneSection background_full={true} title="footer" wide={true}>
-        <div className="flex w-full items-start justify-between px-12 font-mono text-sm">
-          <div>
-            <p>Dream Faster AI </p>
-            <p>UG (haftungsbeschränkt) </p>
-            <p>Berlin </p>
-          </div>
-          <div className="flex flex-row items-center justify-center">
-            <Link
-              href="https://github.com/applied-exploration/dream-faster-landing"
-              className="px-2"
-            >
-              <a href="https://github.com/applied-exploration/dream-faster-landing">
-                {' '}
-                Code on GitHub{' '}
-              </a>
-            </Link>
-            {/* <GitHub
-              url="https://github.com/applied-exploration/dream-faster-landing"
-              background_full={true}
-            /> */}
-          </div>
-        </div>
+      <OneSection background_full={true}>
+        <Footer />
       </OneSection>
     </Main>
   );
