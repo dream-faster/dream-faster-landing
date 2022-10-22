@@ -38,7 +38,7 @@ const Breadcrumbs = () => {
   }
 
   return (
-    <nav aria-label="breadcrumbs" className="w-full h-fit p-0 m-0">
+    <nav aria-label="breadcrumbs" className="w-full h-fit p-0 m-0 ml-6">
       <ol className="flex flex-row p-0 m-0 justify-end">
         <li className="list-none text-xs font-mono m-0 text-black">
           <Link href="/">HOME</Link>
@@ -50,13 +50,13 @@ const Breadcrumbs = () => {
               className="list-none text-xs font-mono no-underline m-0"
             >
               {i === 0 ? (
-                <p className="no-underline border-none m-0 p-0">
+                <p className="no-underline border-none m-0 p-0 whitespace-nowrap text-ellipsis">
                   {`/ ${convertBreadcrumb(breadcrumb.breadcrumb)} `}
                 </p>
               ) : (
                 <Link href={breadcrumb.href}>
                   <a
-                    className={`no-underline border-none ${
+                    className={`no-underline border-none  whitespace-nowrap text-ellipsis ${
                       i === 1 ? 'text-yellow-400' : 'text-black'
                     }`}
                   >{` / ${convertBreadcrumb(breadcrumb.breadcrumb)} `}</a>
