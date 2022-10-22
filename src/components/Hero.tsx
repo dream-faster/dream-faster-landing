@@ -1,8 +1,10 @@
 import { MajorButton } from './MajorButton';
 
 export const Hero = () => (
-  <div className="px-12 ">
-    <p className="min-h-[50vh] font-mono text-sm text-black">
+  <div>
+    <div className="absolute z-10 ml-[-2px] h-5 w-1 bg-black outline-2 outline-white" />
+
+    <p className="min-h-[50vh] px-12  font-mono text-sm text-black">
       We are an independent Machine Learning Research and Development Studio
       based in Berlin.
       <br />
@@ -16,7 +18,7 @@ export const Hero = () => (
       &emsp;- work with experts to develop useful tools and solutions to
       real-world problems
     </p>
-    <div>
+    <div className="px-12">
       <MajorButton text="Who we are" link="/about" />
       <MajorButton text="Collaborate with us" link="/collaborate" primary />
     </div>

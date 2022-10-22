@@ -3,12 +3,12 @@ import Link from 'next/link';
 export const Logo = () => (
   <Link
     href="/"
-    className="flex h-[calc(1rem+9px)]  items-center justify-start"
+    className="flex h-[calc(1rem+9px)]  items-center justify-center "
   >
-    <button className="flex h-[calc(1rem+9px)] w-fit  items-start justify-start ">
+    <button className="flex h-[calc(1rem+9px)] w-full items-start justify-start  md:w-fit">
       {/* <div className="h-full w-1 flex-none bg-yellow-400 " /> */}
       <div className=" flex h-full w-full flex-row items-start justify-start md:items-end">
-        <div className="flex w-full min-w-[12.5%] items-center justify-start bg-yellow-400 px-2  md:justify-end">
+        <div className="flex w-full items-center justify-start bg-yellow-400 px-2 md:w-[12.5vw]  md:justify-end">
           <h1 className="self-end whitespace-nowrap  text-right font-mono text-[calc(1rem+1px)] font-black text-black">
             Dream Faster
           </h1>

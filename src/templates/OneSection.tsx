@@ -33,7 +33,7 @@ const OneSection = ({
       <div
         className={`flex w-full flex-col items-center justify-center ${
           background_full ? 'bg-transparent' : 'bg-white'
-        } py-6 ${wide ? 'md:w-2/3' : 'md:w-2/6'}`}
+        } py-10 ${wide ? 'md:w-2/3' : 'md:w-2/6'}`}
       >
         {children}
       </div>
