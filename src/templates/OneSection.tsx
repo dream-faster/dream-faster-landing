@@ -11,10 +11,14 @@ const OneSection = ({
   title?: string;
   background_full?: boolean;
 }) => (
-  <div className={`mb-6 flex h-full flex-col items-center justify-center`}>
+  <div
+    className={`${
+      title ? 'mt-6' : 'mt-0'
+    } flex h-full flex-col items-center justify-center `}
+  >
     {title ? (
       <p
-        className={`md: my-2 flex w-full justify-start pl-9 font-mono text-xs tracking-widest ${
+        className={`md: my-2  flex w-full justify-start pl-9 font-mono text-xs tracking-widest ${
           wide ? 'md:w-1/2' : 'md:w-2/6'
         }`}
       >
@@ -22,7 +26,7 @@ const OneSection = ({
       </p>
     ) : null}
     <div
-      className={`flex w-full flex-col items-center justify-center ${
+      className={`flex w-full flex-col items-center justify-center shadow-lg ${
         background_full ? 'bg-yellow-400' : 'bg-white'
       } ${wide ? 'md:w-3/4' : 'md:w-2/6'}`}
     >
