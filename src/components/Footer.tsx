@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const Footer = () => (
-  <div className="flex w-full items-start justify-between px-8 font-mono text-sm text-black md:px-6 ">
+  <div className="flex w-full items-start justify-between px-8 font-mono text-sm text-black md:px-6">
     <div>
       <p>Dream Faster AI </p>
       <p className="-mt-1 mb-1 text-xs text-black text-opacity-30">

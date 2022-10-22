@@ -9,7 +9,7 @@ class MyDocument extends Document {
     return (
       <Html lang={AppConfig.locale}>
         <Head />
-        <body>
+        <body className="overflow-x-hidden">
           <Main />
           <NextScript />
         </body>

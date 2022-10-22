@@ -26,7 +26,7 @@ export default function Index({
       <OneSection>
         <Hero />
       </OneSection>
-      <OneSection title="projects">
+      <OneSection title="projects 👇">
         <ProjectsSection allPostsData={allPostsData} />
       </OneSection>
       <div className="h-28" />
