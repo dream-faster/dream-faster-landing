@@ -4,13 +4,16 @@ import { MajorButton } from '@/components/MajorButton';
 import ProjectsSection from '@/components/ProjectsSection';
 import { Meta } from '@/layouts/Meta';
 import { getSortedPostsData } from '@/lib/projects';
+import { getSortedTopicsData } from '@/lib/topics';
 import { Main } from '@/templates/Main';
 import OneSection from '@/templates/OneSection';
 
 export default function Index({
   allPostsData,
+  allTopicsData,
 }: {
   allPostsData: [string, string, string, string];
+  allTopicsData: [string, string, string, string];
 }): JSX.Element {
   // const router = useRouter();
 
@@ -28,7 +31,7 @@ export default function Index({
         <Hero />
       </OneSection>
       <OneSection title="projects 👇">
-        <ProjectsSection allPostsData={allPostsData} />
+        <ProjectsSection allPostsData={allPostsData} baseUrl="projects" />
       </OneSection>
       <OneSection title="links 👇">
         <div>
@@ -45,6 +48,9 @@ export default function Index({
           />
         </div>
       </OneSection>
+      <OneSection title="topics 👇">
+        <ProjectsSection allPostsData={allTopicsData} baseUrl="topics" />
+      </OneSection>
       <div className="h-28" />
       <OneSection background_full={true}>
         <Footer />
@@ -55,9 +61,11 @@ export default function Index({
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
+  const allTopicsData = getSortedTopicsData();
   return {
     props: {
       allPostsData,
+      allTopicsData,
     },
   };
 }
