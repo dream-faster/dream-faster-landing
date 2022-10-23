@@ -1,5 +1,6 @@
 import { Footer } from '@/components/Footer';
 import { Hero } from '@/components/Hero';
+import { MajorButton } from '@/components/MajorButton';
 import ProjectsSection from '@/components/ProjectsSection';
 import { Meta } from '@/layouts/Meta';
 import { getSortedPostsData } from '@/lib/projects';
@@ -28,6 +29,17 @@ export default function Index({
       </OneSection>
       <OneSection title="projects 👇">
         <ProjectsSection allPostsData={allPostsData} />
+      </OneSection>
+      <OneSection title="links 👇">
+        <div>
+          <MajorButton
+            text="Applied Exploration Blog"
+            link="https://www.appliedexploration.com/"
+            external={true}
+          />
+          {/* <MajorButton sibling external />
+          <MajorButton sibling external /> */}
+        </div>
       </OneSection>
       <div className="h-28" />
       <OneSection background_full={true}>
