@@ -1,5 +1,5 @@
 import { getAllPostIds, getPostData } from '@/lib/projects';
-import { MajorButton } from '@/components/MajorButton';
+import { MajorButton } from '@/components/MajorButton.tsx';
 import { Article } from '@/templates/Article.tsx';
 
 export default function Post({ postData }) {
