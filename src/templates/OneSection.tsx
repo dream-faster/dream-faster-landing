@@ -18,7 +18,7 @@ const OneSection = ({
   >
     {title ? (
       <p
-        className={`flex  w-full justify-start pl-9 font-mono text-xs tracking-widest md:my-2 ${
+        className={`my-2  flex w-full justify-start pl-16 font-mono text-xs tracking-widest md:pl-9 ${
           wide ? 'md:w-1/2' : 'md:w-2/6'
         }`}
       >

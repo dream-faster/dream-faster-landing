@@ -1,4 +1,3 @@
-import { Footer } from '@/components/Footer';
 import { Hero } from '@/components/Hero';
 import { MajorButton } from '@/components/MajorButton';
 import ProjectsSection from '@/components/ProjectsSection';
@@ -34,7 +33,7 @@ export default function Index({
         <ProjectsSection allPostsData={allPostsData} baseUrl="projects" />
       </OneSection>
       <OneSection title="links 👇">
-        <div>
+        <div className="flex flex-col flex-wrap items-start justify-start px-8 md:flex-row">
           <MajorButton
             text="GitHub Organisation"
             link="https://github.com/applied-exploration"
@@ -52,9 +51,6 @@ export default function Index({
         <ProjectsSection allPostsData={allTopicsData} baseUrl="topics" />
       </OneSection>
       <div className="h-28" />
-      <OneSection background_full={true}>
-        <Footer />
-      </OneSection>
     </Main>
   );
 }

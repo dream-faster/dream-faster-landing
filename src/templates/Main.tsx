@@ -1,7 +1,10 @@
 import type { ReactNode } from 'react';
 
 import Background from '@/components/Background';
+import { Footer } from '@/components/Footer';
 import Menu from '@/components/Menu';
+
+import OneSection from './OneSection';
 
 type IMainProps = {
   meta: ReactNode;
@@ -15,6 +18,9 @@ const Main = (props: IMainProps) => (
     <Menu wide={props.wide} />
     {props.children}
     <Background wide={props.wide} />
+    <OneSection background_full={true}>
+      <Footer />
+    </OneSection>
   </div>
 );
 

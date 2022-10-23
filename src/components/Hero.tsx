@@ -4,7 +4,7 @@ export const Hero = () => (
   <div>
     <div className="absolute z-10 ml-[18px] h-5 w-1 bg-black outline-2 outline-white dark:bg-white md:ml-[-2px] " />
 
-    <p className="min-h-[calc(100vh-16rem)] px-12 font-mono  text-sm text-black dark:text-slate-300 md:min-h-[calc(100vh-17rem)]">
+    <p className="min-h-[calc(100vh-21rem)] px-12 font-mono  text-sm text-black dark:text-slate-300 md:min-h-[calc(100vh-17rem)]">
       We are an independent Machine Learning Research and Development Studio
       based in Berlin.
       <br />
