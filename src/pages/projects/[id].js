@@ -1,5 +1,6 @@
 import { getAllPostIds, getPostData } from '@/lib/projects';
-import { Article } from '../../templates/Article.tsx';
+import { MajorButton } from '@/components/MajorButton';
+import { Article } from '@/templates/Article.tsx';
 
 export default function Post({ postData }) {
   return (
@@ -11,6 +12,17 @@ export default function Post({ postData }) {
           className="dark:text-slate-100"
         />
       </article>
+      <div className="border-top-2 border-top-yellow-400 mt-12 border-top-solid">
+        <p className="mb-2">
+          Interested in {postData.title} or projects like it? Get in touch with
+          us:
+        </p>
+        <MajorButton
+          text="Collaborate with us"
+          link="/collaborate"
+          primary={false}
+        />
+      </div>
     </Article>
   );
 }
