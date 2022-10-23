@@ -34,7 +34,7 @@ export const MajorButton = ({
   text: string;
   link: string;
   primary?: boolean;
-  external: boolean;
+  external?: boolean;
 }) =>
   external ? (
     <button className="group mx-2 min-h-[calc(1rem+9px)] shadow-none outline-none ">

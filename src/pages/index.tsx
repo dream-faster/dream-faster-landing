@@ -43,8 +43,6 @@ export default function Index({
             external
             primary
           />
-          {/* <MajorButton sibling external />
-          <MajorButton sibling external /> */}
         </div>
       </OneSection>
       <div className="h-28" />
