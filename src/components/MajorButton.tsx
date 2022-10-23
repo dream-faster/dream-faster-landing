@@ -36,7 +36,7 @@ export const MajorButton = ({
   link: string;
   primary?: boolean;
   external?: boolean;
-  type_?: string;
+  type_?: any;
 }) =>
   external || type_ ? (
     <button
