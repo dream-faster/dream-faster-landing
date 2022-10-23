@@ -1,7 +1,21 @@
+import React, { useEffect } from 'react';
+
 export const ToggleButton = () => {
   function toggleSwitch() {
     document.documentElement.classList.toggle('dark');
+    // localStorage.theme = 'light';
   }
+  useEffect(() => {
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  });
 
   return (
     <div className="flex flex-row items-center justify-center justify-self-center">
