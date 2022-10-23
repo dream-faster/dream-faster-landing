@@ -4,13 +4,11 @@ const Box = ({
   text,
   primary,
   sibling,
-  external_,
   external_link,
 }: {
   text: string;
   primary?: boolean;
   sibling?: boolean;
-  external_?: boolean;
   external_link?: string;
 }) => (
   <a
@@ -20,8 +18,8 @@ const Box = ({
     } ${primary ? 'group-hover:text-white' : 'group-hover:text-black'} ${
       sibling ? 'ml-[-1px]' : 'ml-0'
     } ${primary ? 'dark:text-slate-800' : 'dark:text-slate-300'}`}
-    rel={`${external_ ? 'noopener noreferrer' : 'noreferrer'}`}
-    target={`${external_ ? '_blank' : '_self'}`}
+    rel={`${external_link ? 'noopener noreferrer' : 'noreferrer'}`}
+    target={`${external_link ? '_blank' : '_self'}`}
   >
     {text}
   </a>
@@ -36,29 +34,18 @@ export const MajorButton = ({
   text: string;
   link: string;
   primary?: boolean;
-  external?: boolean;
+  external: boolean;
 }) =>
   external ? (
     <button className="group mx-2 min-h-[calc(1rem+9px)] shadow-none outline-none ">
-      <Box
-        primary={primary}
-        text={text}
-        external_={external}
-        external_link={link}
-      />
-      <Box
-        primary={primary}
-        text={'➡'}
-        sibling
-        external_={external}
-        external_link={link}
-      />
+      <Box primary={primary} text={text} external_link={link} />
+      <Box primary={primary} text={'➡'} sibling external_link={link} />
     </button>
   ) : (
     <Link href={link}>
       <button className="group mx-2 min-h-[calc(1rem+9px)] shadow-none outline-none ">
-        <Box primary={primary} text={text} external_={external} />
-        <Box primary={primary} text={'➡'} sibling external_={external} />
+        <Box primary={primary} text={text} />
+        <Box primary={primary} text={'➡'} sibling />
       </button>
     </Link>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ToggleButton = () => {
+export const DarkModeButton = () => {
   function toggleSwitch() {
     document.documentElement.classList.toggle('dark');
     // localStorage.theme = 'light';
@@ -18,7 +18,7 @@ export const ToggleButton = () => {
   // });
 
   return (
-    <div className="flex flex-row items-center justify-center justify-self-center">
+    <div className="flex h-full w-full flex-row items-center justify-center justify-self-center">
       ☀️
       <button
         title="Toggle Theme"
