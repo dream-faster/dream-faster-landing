@@ -30,16 +30,26 @@ export const MajorButton = ({
   link,
   primary,
   external,
+  type_,
 }: {
   text: string;
   link: string;
   primary?: boolean;
   external?: boolean;
+  type_?: string;
 }) =>
-  external ? (
-    <button className="group mx-2 min-h-[calc(1rem+9px)] shadow-none outline-none ">
-      <Box primary={primary} text={text} external_link={link} />
-      <Box primary={primary} text={'➡'} sibling external_link={link} />
+  external || type_ ? (
+    <button
+      type={type_ || 'button'}
+      className="group mx-2 min-h-[calc(1rem+9px)] shadow-none outline-none "
+    >
+      <Box primary={primary} text={text} external_link={type_ ? '' : link} />
+      <Box
+        primary={primary}
+        text={'➡'}
+        sibling
+        external_link={type_ ? '' : link}
+      />
     </button>
   ) : (
     <Link href={link}>
