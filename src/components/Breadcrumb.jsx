@@ -49,19 +49,13 @@ const Breadcrumbs = () => {
               key={breadcrumb.href}
               className="list-none text-xs font-mono no-underline m-0"
             >
-              {i === 0 ? (
-                <p className="no-underline border-none m-0 p-0 whitespace-nowrap text-ellipsis">
-                  {`/ ${convertBreadcrumb(breadcrumb.breadcrumb)} `}
-                </p>
-              ) : (
-                <Link href={breadcrumb.href}>
-                  <a
-                    className={`no-underline border-none  whitespace-nowrap text-ellipsis ${
-                      i === 1 ? 'text-yellow-400' : 'text-black'
-                    }`}
-                  >{` / ${convertBreadcrumb(breadcrumb.breadcrumb)} `}</a>
-                </Link>
-              )}
+              <Link href={breadcrumb.href}>
+                <a
+                  className={`no-underline border-none  whitespace-nowrap text-ellipsis ${
+                    i === 1 ? 'text-yellow-400' : 'text-black'
+                  }`}
+                >{` / ${convertBreadcrumb(breadcrumb.breadcrumb)} `}</a>
+              </Link>
             </li>
           );
         })}

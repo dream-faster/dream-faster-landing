@@ -13,7 +13,7 @@ const Box = ({
 }) => (
   <a
     href={external_link || ''}
-    className={`mx-0 h-[calc(1rem+15px)]  w-fit border border-yellow-400 px-3 py-1 text-right font-mono text-black hover:border hover:border-yellow-400 group-hover:border-yellow-400 group-hover:bg-yellow-400 group-hover:shadow-md dark:text-slate-300 md:mr-0 ${
+    className={`mx-0 h-[calc(1rem+15px)]  w-fit border border-yellow-400 px-3 py-1 text-right font-mono text-black  group-hover:border-yellow-400 group-hover:bg-yellow-400 group-hover:shadow-md dark:text-slate-300 md:mr-0 ${
       primary ? 'bg-yellow-400' : 'bg-transparent'
     } ${primary ? 'group-hover:text-white' : 'group-hover:text-black'} ${
       sibling ? 'ml-[-1px]' : 'ml-0'
@@ -41,7 +41,7 @@ export const MajorButton = ({
   external || type_ ? (
     <button
       type={type_ || 'button'}
-      className="group mx-2 min-h-[calc(1rem+9px)] shadow-none outline-none "
+      className="group m-2 min-h-[calc(1rem+9px)] min-w-fit shadow-none outline-none"
     >
       <Box primary={primary} text={text} external_link={type_ ? '' : link} />
       <Box
@@ -53,7 +53,7 @@ export const MajorButton = ({
     </button>
   ) : (
     <Link href={link}>
-      <button className="group mx-2 min-h-[calc(1rem+9px)] shadow-none outline-none ">
+      <button className="group m-2 min-h-[calc(1rem+9px)] shadow-none outline-none ">
         <Box primary={primary} text={text} />
         <Box primary={primary} text={'➡'} sibling />
       </button>

@@ -45,10 +45,7 @@ const ProjectButton = ({
           <p className="absolute hidden">{date}</p>
         </div>
       </a>
-      <GitHub
-        url={url}
-        // imgSource={`${router.basePath}/assets/images/github.svg`}
-      />
+      {url === '' ? null : <GitHub url={url} />}
     </div>
   );
 };
