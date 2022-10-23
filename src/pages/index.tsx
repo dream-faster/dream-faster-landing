@@ -33,15 +33,15 @@ export default function Index({
       <OneSection title="links 👇">
         <div>
           <MajorButton
+            text="GitHub Organisation"
+            link="https://github.com/applied-exploration"
+            external
+          />
+          <MajorButton
             text="Applied Exploration Blog"
             link="https://www.appliedexploration.com/"
             external
             primary
-          />
-          <MajorButton
-            text="GitHub Organisation"
-            link="https://github.com/applied-exploration"
-            external
           />
           {/* <MajorButton sibling external />
           <MajorButton sibling external /> */}
