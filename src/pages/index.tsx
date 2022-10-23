@@ -35,7 +35,13 @@ export default function Index({
           <MajorButton
             text="Applied Exploration Blog"
             link="https://www.appliedexploration.com/"
-            external={true}
+            external
+            primary
+          />
+          <MajorButton
+            text="GitHub Organisation"
+            link="https://github.com/applied-exploration"
+            external
           />
           {/* <MajorButton sibling external />
           <MajorButton sibling external /> */}
