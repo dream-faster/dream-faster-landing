@@ -4,9 +4,12 @@ import { Article } from '../../templates/Article.tsx';
 export default function Post({ postData }) {
   return (
     <Article>
-      <article className="prose prose-zinc  w-full">
+      <article className="prose prose-zinc dark:prose-invert w-full ">
         <h3> {postData.description} </h3>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+          className="dark:text-slate-100"
+        />
       </article>
     </Article>
   );

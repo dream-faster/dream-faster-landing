@@ -9,11 +9,11 @@ export const Logo = () => (
       {/* <div className="h-full w-1 flex-none bg-yellow-400 " /> */}
       <div className=" flex h-full w-full flex-row items-start justify-start md:items-end">
         <div className="flex w-full items-center justify-start bg-yellow-400 px-2 md:w-[12.5vw]  md:justify-end">
-          <h1 className="self-end whitespace-nowrap  text-right font-mono text-[calc(1rem+1px)] font-black text-black">
+          <h1 className="self-end whitespace-nowrap text-right font-mono text-[calc(1rem+1px)] font-black text-black dark:text-slate-800">
             Dream Faster
           </h1>
         </div>
-        <h2 className="flex h-full flex-none items-center justify-center whitespace-nowrap px-2 text-right font-mono text-sm text-black md:self-end">
+        <h2 className="flex h-full flex-none items-center justify-center whitespace-nowrap px-2 text-right font-mono text-sm text-black dark:text-slate-300 md:self-end">
           Studio
         </h2>
       </div>

@@ -10,7 +10,7 @@ type IMainProps = {
 };
 
 const Main = (props: IMainProps) => (
-  <div className="h-full w-screen overflow-hidden bg-zinc-100 text-gray-700 antialiased">
+  <div className="h-full w-screen overflow-hidden bg-zinc-100 text-gray-700 antialiased dark:bg-slate-800">
     {props.meta}
     <Menu wide={props.wide} />
     {props.children}

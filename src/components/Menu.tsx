@@ -1,5 +1,6 @@
 import { MajorButton } from '@/components/MajorButton';
 
+import { ToggleButton } from './DarkModeButton';
 import { Logo } from './Logo';
 
 const Menu = ({ wide }: { wide: boolean }) => (
@@ -19,6 +20,7 @@ const Menu = ({ wide }: { wide: boolean }) => (
         primary={false}
       />
     </div>
+    <ToggleButton />
   </div>
 );
 
