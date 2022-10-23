@@ -13,7 +13,7 @@ const Box = ({
 }) => (
   <a
     href={external_link || ''}
-    className={`mx-0 h-[calc(1rem+15px)]  w-fit border border-yellow-400 px-3 py-1 text-right font-mono text-black hover:border  group-hover:border-yellow-400 group-hover:bg-yellow-400 group-hover:shadow-md dark:text-slate-300 md:mr-0 ${
+    className={`mx-0 h-[calc(1rem+15px)]  w-fit border border-yellow-400 px-3 py-1 text-right font-mono text-black  group-hover:border-yellow-400 group-hover:bg-yellow-400 group-hover:shadow-md dark:text-slate-300 md:mr-0 ${
       primary ? 'bg-yellow-400' : 'bg-transparent'
     } ${primary ? 'group-hover:text-white' : 'group-hover:text-black'} ${
       sibling ? 'ml-[-1px]' : 'ml-0'
