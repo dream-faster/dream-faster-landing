@@ -1,5 +1,6 @@
 import { MajorButton } from '@/components/MajorButton';
 
+import { DarkModeButton } from './DarkModeButton';
 import { Logo } from './Logo';
 
 const Menu = ({ wide }: { wide: boolean }) => (
@@ -18,6 +19,9 @@ const Menu = ({ wide }: { wide: boolean }) => (
         link="/collaborate"
         primary={false}
       />
+    </div>
+    <div className="hidden h-full w-full items-center justify-center md:flex">
+      <DarkModeButton />
     </div>
   </div>
 );

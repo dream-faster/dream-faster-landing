@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import { DarkModeButton } from './DarkModeButton';
+
 export const Footer = () => (
   <div className="flex w-full items-start justify-between px-8 font-mono text-sm text-black md:px-6">
     <div>
@@ -9,7 +11,7 @@ export const Footer = () => (
       </p>
       <p>🐻 Berlin </p>
     </div>
-    <div className="flex flex-row items-end justify-end">
+    <div className="flex flex-col items-end justify-end">
       <Link
         href="https://github.com/applied-exploration/dream-faster-landing"
         className="px-2"
@@ -22,6 +24,9 @@ export const Footer = () => (
           Code on GitHub{' '}
         </a>
       </Link>
+      <div className="mt-2 flex h-full w-full items-end md:hidden md:items-center md:justify-center">
+        <DarkModeButton />
+      </div>
       {/* <GitHub
     url="https://github.com/applied-exploration/dream-faster-landing"
     background_full={true}

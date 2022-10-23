@@ -9,7 +9,7 @@ const GitHub = ({
     href={url}
     target="_blank"
     rel="noopener noreferrer"
-    className={`z-10 m-0 flex flex-none items-start justify-center self-start bg-white p-1 hover:border hover:border-yellow-400 hover:bg-yellow-400 hover:!fill-white group-hover:border group-hover:border-yellow-400 group-hover:fill-yellow-400 group-hover:p-[3px] ${
+    className={`z-10 m-0 flex flex-none items-start justify-center self-start bg-white p-1 hover:border hover:border-yellow-400 hover:bg-yellow-400 hover:!fill-white group-hover:border group-hover:border-yellow-400 group-hover:fill-yellow-400 group-hover:p-[3px] dark:bg-slate-900 dark:fill-slate-200 dark:hover:bg-yellow-300 dark:hover:!fill-slate-800  ${
       background_full ? 'bg-transparent' : 'bg-white'
     }`}
     onPointerOver={(e) => e.stopPropagation()}
