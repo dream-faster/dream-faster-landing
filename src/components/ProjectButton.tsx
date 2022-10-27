@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
+import type { ReactNode } from 'react';
 
 import GitHub from './GitHub';
-import Plus from './Plus';
 
 const ProjectButton = ({
   title,
@@ -9,12 +9,14 @@ const ProjectButton = ({
   url,
   linkto,
   date,
+  decorator,
 }: {
   title: string;
   subtitle: string;
   url: string;
   linkto: string;
   date: string;
+  decorator: ReactNode;
 }) => {
   const router = useRouter();
 
@@ -30,7 +32,7 @@ const ProjectButton = ({
         onClick={handleClick}
         className="  flex w-full items-start justify-center hover:border-none"
       >
-        <Plus />
+        {decorator}
         <div className="m-0 flex h-full w-full flex-col justify-center px-4">
           <div className="flex h-full items-start py-1  group-hover:bg-yellow-400">
             <h1 className=" flex h-[calc(1rem+1px)] w-full items-center pl-4 align-middle font-mono text-[calc(1rem+1px)] font-bold text-black dark:text-slate-200 dark:group-hover:text-slate-800">

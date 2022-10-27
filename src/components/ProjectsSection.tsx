@@ -1,5 +1,7 @@
 import ProjectButton from '@/components/ProjectButton';
 
+import Plus from './Plus';
+
 const ProjectsSection = ({
   allPostsData,
   baseUrl,
@@ -16,6 +18,7 @@ const ProjectsSection = ({
         date={date}
         url={github_link}
         linkto={`/${baseUrl}/${id}`}
+        decorator={<Plus />}
       />
     ))}
   </div>
