@@ -18,8 +18,8 @@ export const ProfileCard = ({
   profile_url: string;
   urls: Array<Record<string, string>>;
 }) => (
-  <div className="m-2 flex max-w-2xl flex-row font-mono text-xs">
-    <div className="mr-4 flex items-start justify-start">
+  <div className="m-2 mr-6 flex max-w-2xl flex-row font-mono text-xs">
+    <div className="mr-3 flex items-start justify-start">
       <img
         className="h-10 w-10 rounded border border-solid border-yellow-400"
         src={profile_url}
@@ -27,7 +27,7 @@ export const ProfileCard = ({
       />
     </div>
     <div className="flex flex-col">
-      <p className="">{name}</p>
+      <p className="text-gray-700 dark:text-white">{name}</p>
 
       <div className="flex w-full flex-row">
         {urls.map((url, i) => (
