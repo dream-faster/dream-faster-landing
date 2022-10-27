@@ -1,86 +1,5 @@
 import { MajorButton } from './MajorButton';
-
-const userInfo = [
-  {
-    name: 'Mark Aron Szulyovszky',
-    profile: '/assets/images/mark_profile.jpeg',
-    urls: [
-      {
-        name: 'linkedin',
-        url: 'https://www.linkedin.com/in/markszulyovszky/',
-      },
-      {
-        name: 'github',
-        url: 'https://github.com/itchingpixels',
-      },
-      {
-        name: 'blog',
-        url: 'https://almostintuitive.com/',
-      },
-    ],
-  },
-  {
-    name: 'Daniel Szemerey',
-    profile: '/assets/images/dani_profile.jpeg',
-    urls: [
-      {
-        name: 'linkedin',
-        url: 'https://www.linkedin.com/in/daniel-szemerey/',
-      },
-      {
-        name: 'github',
-        url: 'https://github.com/szemyd/',
-      },
-      {
-        name: 'blog',
-        url: 'https://szemerey.eu',
-      },
-    ],
-  },
-];
-
-const TinyLink = ({ url, name }: { url?: string; name?: string }) => (
-  <a
-    className=" border-none text-yellow-400"
-    href={url}
-    target="_blank"
-    rel="noreferrer"
-  >
-    {name}
-  </a>
-);
-
-const ProfilePic = ({
-  name,
-  profile_url,
-  urls,
-}: {
-  name: string;
-  profile_url: string;
-  urls: Array<Record<string, string>>;
-}) => (
-  <div className="m-2 flex max-w-2xl flex-row font-mono text-xs">
-    <div className="mr-4 flex items-start justify-start">
-      <img
-        className="h-10 w-10 rounded border border-solid border-yellow-400"
-        src={profile_url}
-        alt="Rounded avatar"
-      />
-    </div>
-    <div className="flex flex-col">
-      <p className="">{name}</p>
-
-      <div className="flex w-full flex-row">
-        {urls.map((url, i) => (
-          <div key={i} className="text-gray-500">
-            {' '}
-            <TinyLink name={url.name} url={url.url} /> |&nbsp;{' '}
-          </div>
-        ))}
-      </div>
-    </div>
-  </div>
-);
+import { ProfileCardSection } from './ProfileCardSection';
 
 export const Hero = () => (
   <div className="flex h-full w-full flex-col justify-between md:min-h-[calc(100vh-16rem)]">
@@ -92,7 +11,7 @@ export const Hero = () => (
         based in Berlin.
         <br />
         <br />
-        <b>🏔️ We aspire to:</b>
+        <b>We aspire to:</b>
         <p className="ml-2 w-full">
           * make state of the art algorithms more convenient to access
           <br />
@@ -105,16 +24,7 @@ export const Hero = () => (
           <br />* create interpretable ML to expand human knowledge
         </p>
       </article>
-      <div className="mt-6 flex h-full flex-col items-start justify-start px-12">
-        {userInfo.map((user, i) => (
-          <ProfilePic
-            key={i}
-            name={user.name}
-            profile_url={user.profile}
-            urls={user.urls}
-          />
-        ))}
-      </div>
+      <ProfileCardSection />
     </div>
     <div className="px-12">
       <MajorButton text="Who we are" link="/about" />
