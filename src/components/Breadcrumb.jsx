@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react';
 
 const convertBreadcrumb = (string) => {
   return string
@@ -38,21 +38,27 @@ const Breadcrumbs = () => {
   }
 
   return (
-    <nav aria-label="breadcrumbs" className="w-full h-fit p-0 m-0 ml-6">
-      <ol className="flex flex-row p-0 m-0 justify-end">
-        <li className="list-none text-xs font-mono m-0 text-black">
-          <Link href="/">HOME</Link>
+    <nav aria-label="breadcrumbs" className="m-0 ml-6 h-fit w-full p-0">
+      <ol className="m-0 flex flex-row justify-end p-0">
+        <li className="m-0 list-none font-mono text-xs  text-gray-600">
+          <Link href="/" className="font-mono text-xs  text-gray-600">
+            <a className="text-ellipsis whitespace-nowrap  border-none text-gray-600 no-underline">
+              HOME
+            </a>
+          </Link>
         </li>
         {breadcrumbs.map((breadcrumb, i) => {
           return (
             <li
               key={breadcrumb.href}
-              className="list-none text-xs font-mono no-underline m-0"
+              className="m-0 list-none font-mono text-xs no-underline"
             >
               <Link href={breadcrumb.href}>
                 <a
-                  className={`no-underline border-none  whitespace-nowrap text-ellipsis ${
-                    i === 1 ? 'text-yellow-400' : 'text-black'
+                  className={`text-ellipsis whitespace-nowrap  border-none no-underline ${
+                    i === breadcrumbs.length - 1
+                      ? 'text-yellow-400'
+                      : 'text-gray-600'
                   }`}
                 >{` / ${convertBreadcrumb(breadcrumb.breadcrumb)} `}</a>
               </Link>
