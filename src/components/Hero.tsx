@@ -1,5 +1,5 @@
 import { MajorButton } from './MajorButton';
-import { ProfileCardSection } from './ProfileCardSection';
+import { CommunityCardSection, ProfileCardSection } from './ProfileCardSection';
 
 export const Hero = () => (
   <div className="flex h-full w-full flex-col justify-between md:min-h-[calc(100vh-16rem)]">
@@ -7,27 +7,33 @@ export const Hero = () => (
     <div className="flex h-full w-full flex-col justify-between">
       <article className=" prose prose-zinc h-full w-full max-w-2xl px-12 font-mono text-sm text-black dark:prose-invert dark:text-slate-300">
         <h2>Welcome 👋</h2>
-        We are an independent Machine Learning Research and Development Studio
-        based in Berlin.
-        <br />
-        <br />
-        <b>We aspire to:</b>
-        <p className="ml-2 w-full">
-          👉 make state of the art algorithms more convenient to access
-          <br />
-          👉 explore if ML practices hold up to scrutiny
-          <br />
-          👉 work with experts to develop useful tools and solutions to
-          real-world problems
-          <br />
-          👉 revitalize forgotten ideas in AI
-          <br />
-          👉 create interpretable ML to expand human knowledge
+        <p className="underline decoration-yellow-400 underline-offset-2">
+          <b>
+            We are an independent Machine Learning Research and Development
+            Studio based in Berlin.
+          </b>
         </p>
       </article>
-      <ProfileCardSection />
+
+      <article className="prose prose-zinc h-full w-full max-w-2xl px-12 font-mono text-sm text-black opacity-50 dark:prose-invert dark:text-slate-300">
+        <br />
+        <b>We aspire to:</b>
+        <p className=" w-full whitespace-pre-line">
+          {[
+            'Make state of the art algorithms more convenient to access',
+            'Explore if ML practices hold up to scrutiny',
+            'Work with experts to develop useful tools and solutions to real-world problems',
+            'Revitalize forgotten ideas in AI',
+            'Create interpretable ML to expand human knowledge',
+          ].map((e) => `🟨 ${e}\n`)}
+        </p>
+      </article>
     </div>
-    <div className="px-12">
+    <div className="mt-6 flex flex-col flex-wrap px-12 md:flex-row">
+      <ProfileCardSection />
+      <CommunityCardSection />
+    </div>
+    <div className="-ml-2 px-12">
       <MajorButton text="Who we are" link="/about" />
       <MajorButton text="Collaborate with us" link="/collaborate" primary />
     </div>
