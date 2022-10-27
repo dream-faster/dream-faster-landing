@@ -39,7 +39,7 @@ const userInfo = [
   },
 ];
 export const ProfileCardSection = () => (
-  <div className="mt-6 flex h-full flex-col items-start justify-start px-12">
+  <div className="mt-6 flex h-full flex-col items-start justify-start px-12 md:flex-row">
     {userInfo.map((user, i) => (
       <ProfileCard
         key={i}
