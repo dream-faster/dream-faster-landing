@@ -41,7 +41,7 @@ export const MajorButton = ({
   external || type_ ? (
     <button
       type={type_ || 'button'}
-      className="group m-2 h-fit min-h-[calc(1rem+9px)] min-w-fit shadow-none outline-none"
+      className="group m-2 h-fit min-h-[calc(1rem+9px)] min-w-fit py-1 shadow-none outline-none"
     >
       <Box primary={primary} text={text} external_link={type_ ? '' : link} />
       <Box
@@ -53,7 +53,7 @@ export const MajorButton = ({
     </button>
   ) : (
     <Link href={link}>
-      <button className="group m-2 h-fit min-h-[calc(1rem+9px)] shadow-none outline-none ">
+      <button className="group m-2 h-fit min-h-[calc(1rem+9px)] py-1 shadow-none outline-none ">
         <Box primary={primary} text={text} />
         <Box primary={primary} text={'➡'} sibling />
       </button>
