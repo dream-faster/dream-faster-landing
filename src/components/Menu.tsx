@@ -5,7 +5,7 @@ import { Logo } from './Logo';
 
 const Menu = ({ wide }: { wide: boolean }) => (
   <div
-    className={`left-0 z-20 flex h-20 w-screen flex-col items-center justify-center p-[19px]  md:grid  md:p-0 ${
+    className={`left-0 z-20 flex h-14 w-screen flex-col items-center justify-center p-[19px] md:grid  md:h-20  md:p-0 ${
       wide ? 'md:grid-cols-8' : 'md:grid-cols-6'
     }`}
   >
