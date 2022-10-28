@@ -114,7 +114,7 @@ export const CommunityCardSection = () => (
     {communityInfo.map((user, i) => (
       <a
         target="_blank"
-        href={user.urls[0].url}
+        href=""
         key={i}
         className={`group z-0 m-0 flex-none  hover:z-30 ${
           i === 0 ? 'ml-0' : '-ml-7'
