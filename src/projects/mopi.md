@@ -3,6 +3,7 @@ title: "Modular Pipelines"
 date: "2022-09-10"
 github_link: "https://github.com/applied-exploration/modular-pipelines"
 description: "Create complex pipelines fast. Stack, Ensemble or create multi-objective optimization."
+tag: "mltools"
 ---
 
 # Modular Pipelines
