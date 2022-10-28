@@ -23,6 +23,7 @@ export default function Index({
         <Meta
           title="Dream Faster AI Studio"
           description="Independent R&D studio specialized in Artificial Intelligence."
+          social_card_ending="landing"
         />
       }
     >

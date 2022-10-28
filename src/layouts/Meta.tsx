@@ -7,6 +7,7 @@ import { AppConfig } from '@/utils/AppConfig';
 type IMetaProps = {
   title: string;
   description: string;
+  social_card_ending?: string;
   canonical?: string;
 };
 
@@ -57,6 +58,14 @@ const Meta = (props: IMetaProps) => {
           url: props.canonical,
           locale: AppConfig.locale,
           site_name: AppConfig.site_name,
+          images: [
+            {
+              url: `https://www.fasterdream.com/assets/images/social_card_${props.social_card_ending}.png`,
+              width: 1200,
+              height: 630,
+              alt: 'Dream Faster AI Studio Social OG Image',
+            },
+          ],
         }}
       />
     </>
