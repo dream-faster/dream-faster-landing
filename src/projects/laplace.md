@@ -11,7 +11,7 @@ tag: "neurosymbolic,graphs"
 
 ## Overview
 
-**laplace** is an end-to-end ML framework to train and predict on neurally-enhanced graphs for recommendation. 
+**laplace** is an end-to-end recommendation engine framework for large-scale graphs. 
 
 The pipeline is designed for self-supervised edge prediction on heterogenous graphs. 
 
