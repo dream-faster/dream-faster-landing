@@ -2,11 +2,12 @@
 title: "Drift - Quantitive Analysis"
 date: "2021-12-01"
 github_link: "https://github.com/applied-exploration/drift"
-description: "Quantative analysis without fooling yourself"
+description: "Quantative finance without fooling yourself"
 tag: "timeseries,uncertainity"
 ---
 
-# Drift - Quantitive Analysis
+# Drift - Online FinML framework
 
-And end-to-end pipeline to train predictive Machine Learning models on financial (non-stationary, regime changing) time series. Includes feature selection and meta labelling.
+End-to-end ML pipelines for non-stationary (regime changing) time series, with rolling evaluation.
+Reference implementation of innovative labelling (triple-barrier) and model stacking (eg. meta-labelling) methodologies. Soon to be open source.
 
