@@ -1,4 +1,5 @@
 import { MajorButton } from '@/components/MajorButton';
+import { ProfileCardSection } from '@/components/ProfileCardSection';
 import { Meta } from '@/layouts/Meta';
 import { Article } from '@/templates/Article';
 import { Main } from '@/templates/Main';
@@ -34,6 +35,9 @@ const About = () => (
           <br />
           - Neuro-symbolic approaches, eg. symbolic regression.
           <br />
+          <div className="mt-6 flex  w-full flex-col flex-wrap md:flex-row">
+            <ProfileCardSection large />
+          </div>
           <br />
           <h2> Community </h2>
           Since 2021 we have been developing a community of likeminded

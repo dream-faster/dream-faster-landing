@@ -96,14 +96,19 @@ const communityInfo = [
   },
 ];
 
-export const ProfileCardSection = () => (
-  <div className=" flex h-full flex-col flex-wrap items-start justify-start  md:flex-row">
+export const ProfileCardSection = ({ large }: { large?: boolean }) => (
+  <div
+    className={` flex h-full w-full flex-col flex-wrap items-start  ${
+      large ? 'justify-between' : 'justify-start'
+    } md:flex-row`}
+  >
     {userInfo.map((user, i) => (
       <ProfileCard
         key={i}
         name={user.name}
         profile_url={user.profile}
         urls={user.urls}
+        large={large}
       />
     ))}
   </div>
