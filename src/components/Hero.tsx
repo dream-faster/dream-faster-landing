@@ -20,11 +20,11 @@ export const Hero = () => (
         <p className=" w-full whitespace-pre-line">
           {`\n`}We aspire to:{`\n`}
           {[
-            'Make state of the art algorithms more convenient to access',
-            'Explore if ML practices hold up to scrutiny',
             'Work with experts to develop useful tools and solutions to real-world problems',
-            'Revitalize forgotten ideas in AI',
+            // 'Revitalize forgotten ideas in AI',
             'Create interpretable ML to expand human knowledge',
+            'Explore if ML practices hold up to scrutiny and revitalize forgotten ideas in AI',
+            'Make state of the art algorithms more convenient to access',
           ].map((e) => `* ${e}\n`)}
         </p>
       </article>
