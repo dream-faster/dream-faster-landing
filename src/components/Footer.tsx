@@ -13,12 +13,12 @@ export const Footer = () => (
     </div>
     <div className="flex flex-col items-end justify-end">
       <Link
-        href="https://github.com/applied-exploration/dream-faster-landing"
+        href="https://github.com/dream-faster/dream-faster-landing"
         className="px-2"
       >
         <a
           className="border-none px-2 text-black hover:text-white"
-          href="https://github.com/applied-exploration/dream-faster-landing"
+          href="https://github.com/dream-faster/dream-faster-landing"
         >
           {' '}
           Code on GitHub{' '}
@@ -28,7 +28,7 @@ export const Footer = () => (
         <DarkModeButton />
       </div>
       {/* <GitHub
-    url="https://github.com/applied-exploration/dream-faster-landing"
+    url="https://github.com/dream-faster/dream-faster-landing"
     background_full={true}
   /> */}
     </div>

@@ -134,7 +134,7 @@ All tests are colocated with the source code inside the same directory. So, it m
 
 Clone this repository on own GitHub account and deploy to Netlify:
 
-[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/applied-exploration/dream-faster-landing)
+[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/dream-faster/dream-faster-landing)
 
 ### Deploy to Vercel
 

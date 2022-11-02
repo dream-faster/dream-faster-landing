@@ -37,7 +37,7 @@ export default function Index({
         <div className="flex flex-col flex-wrap items-start justify-start px-8 md:flex-row">
           <MajorButton
             text="GitHub Organisation"
-            link="https://github.com/applied-exploration"
+            link="https://github.com/dream-faster"
             external
           />
           <MajorButton
