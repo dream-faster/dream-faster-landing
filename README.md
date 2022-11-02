@@ -4,5 +4,5 @@ Dream Faster is an independent ML Research Studio, focusing on translating state
 
 ## Using this as a boilerplate
 
-Check out the instructions under [Boilerplate Instructions.md](https://github.com/applied-exploration/dream-faster-landing/Boilerplate_Instructions.md)
+Check out the instructions under [Boilerplate Instructions.md](https://github.com/dream-faster/dream-faster-landing/Boilerplate_Instructions.md)
 

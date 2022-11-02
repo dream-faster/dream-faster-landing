@@ -1,7 +1,7 @@
 ---
 title: "Drift - Quantitive Analysis"
 date: "2021-12-01"
-github_link: "https://github.com/applied-exploration/drift"
+github_link: "https://github.com/dream-faster/drift"
 description: "Quantative finance without fooling yourself"
 tag: "timeseries,uncertainity"
 ---
