@@ -38,7 +38,7 @@ const collaborationOptions = [
   {
     name: 'Proof of Concepts and MVPs',
     title:
-      'Looking to build an AI/ML product but don\'t have technical collaborators?',
+      "Looking to build an AI/ML product but don't have technical collaborators?",
     description:
       'We can help you build state-of-the-art POCs and MVPs. Also, leverage our custom tooling to make your life easier, like:',
     emailSubject: 'Proof of Concept inquiry - [ Project Name ] - [ Pitch ]',
@@ -49,7 +49,7 @@ const collaborationOptions = [
   {
     name: 'Technical Advice',
     title:
-      'Thinking of an AI/ML product but don\'t know where to start? Do you have an AI/ML company you need to evaluate? ',
+      "Thinking of an AI/ML product but don't know where to start? Do you have an AI/ML company you need to evaluate? ",
     description: 'We help with technical advice in the domains of:',
     emailSubject: 'Technical Investment Advice inquiry - [ Project Name ]',
     emailBody: `${welcome}We are interested in getting a second opinion from you!%0D%0D Here is the short introduction to the project we need help with:${projectDescription}${goodbye}${standardOptions}`,
