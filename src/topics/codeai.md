@@ -6,7 +6,7 @@ description: "Static code analyzers can only do so much. Bringing in models that
 tag: "codeai"
 ---
 
-# AI Code Intelligence
+# Sourcecode Intelligence
 
 
 
