@@ -38,19 +38,19 @@ const collaborationOptions = [
   {
     name: 'Proof of Concepts and MVPs',
     title:
-      'Are you interested in building a Proof of Concept or MVP with our help?',
+      'Looking to build an AI/ML product but don\'t have technical collaborators?',
     description:
-      'We build state-of-the-art Proof of Concepts and MVPs on a per case basis. We leverage custom tooling such as in projects like these:',
+      'We can help you build state-of-the-art POCs and MVPs. Also, leverage our custom tooling to make your life easier, like:',
     emailSubject: 'Proof of Concept inquiry - [ Project Name ] - [ Pitch ]',
     emailBody: `${welcome}We are interested in collaborating with you!%0D%0D Here is the short pitch on the project we need help with:${projectDescription}${goodbye}${standardOptions}`,
     interactive: getPosts,
     baseUrl: 'projects',
   },
   {
-    name: 'Technical Investment Advice',
+    name: 'Technical Advice',
     title:
-      'Would you like to get technical advice on an investment you are about to make?',
-    description: 'We help with overviewing technical advice in the domains of:',
+      'Thinking of an AI/ML product but don\'t know where to start? Do you have an AI/ML company you need to evaluate? ',
+    description: 'We help with technical advice in the domains of:',
     emailSubject: 'Technical Investment Advice inquiry - [ Project Name ]',
     emailBody: `${welcome}We are interested in getting a second opinion from you!%0D%0D Here is the short introduction to the project we need help with:${projectDescription}${goodbye}${standardOptions}`,
     interactive: getPosts,
@@ -61,8 +61,8 @@ const collaborationOptions = [
     name: 'Angel Investment',
     title: 'Are you looking for investors that understand challenges in R&D?',
     description:
-      'We leverage our network to connect startups to angel investors, often co-investing.',
-    emailSubject: 'Looking for Angel Investment inquiry - [ Project Name ]',
+      'We leverage our network to connect startups to angel investors, and potetially, co-investing.',
+    emailSubject: 'Angel Investment inquiry - [ Project Name ]',
     emailBody: `${welcome}We are currently raising money!%0D%0D Here is the short introduction to our product:${projectDescription}${goodbye}${standardOptions}`,
     interactive: () => null,
   },
