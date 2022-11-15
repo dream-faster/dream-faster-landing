@@ -55,7 +55,7 @@ const collaborationOptions = [
     emailBody: `${welcome}We are interested in getting a second opinion from you!%0D%0D Here is the short introduction to the project we need help with:${projectDescription}${goodbye}${standardOptions}`,
     interactive: getPosts,
     baseUrl: 'topics',
-    // interactive: (x) => null,
+    // interactive: () => null,
   },
   {
     name: 'Angel Investment',
@@ -64,7 +64,7 @@ const collaborationOptions = [
       'We leverage our network to connect startups to angel investors, often co-investing.',
     emailSubject: 'Looking for Angel Investment inquiry - [ Project Name ]',
     emailBody: `${welcome}We are currently raising money!%0D%0D Here is the short introduction to our product:${projectDescription}${goodbye}${standardOptions}`,
-    interactive: (x) => null,
+    interactive: () => null,
   },
 ];
 
