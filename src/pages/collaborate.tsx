@@ -61,7 +61,7 @@ const collaborationOptions = [
     name: 'Angel Investment',
     title: 'Are you looking for investors that understand challenges in R&D?',
     description:
-      'We leverage our network to connect startups to angel investors, and potetially, co-investing.',
+      'We leverage our network to connect startups to angel investors, and potentially, co-investing.',
     emailSubject: 'Angel Investment inquiry - [ Project Name ]',
     emailBody: `${welcome}We are currently raising money!%0D%0D Here is the short introduction to our product:${projectDescription}${goodbye}${standardOptions}`,
     interactive: () => null,
