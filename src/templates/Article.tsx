@@ -7,21 +7,24 @@ import OneSection from './OneSection';
 
 type IMainProps = {
   children: ReactNode;
+  nobreadcrumb?: boolean;
 };
 
 const Article = (props: IMainProps) => (
   <OneSection>
     <div className=" flex w-full flex-col items-start justify-around bg-white p-10 dark:bg-slate-900 md:col-span-4 ">
-      <div className="mb-10 flex w-full flex-row justify-around">
-        <button
-          onClick={() => router.back()}
-          className="flex w-fit items-end justify-start whitespace-nowrap p-0 font-mono text-xs tracking-widest"
-        >
-          {' '}
-          ← BACK
-        </button>
-        <Breadcrumbs />
-      </div>
+      {!props.nobreadcrumb && (
+        <div className="mb-10 flex w-full flex-row justify-around">
+          <button
+            onClick={() => router.back()}
+            className="flex w-fit items-end justify-start whitespace-nowrap p-0 font-mono text-xs tracking-widest"
+          >
+            {' '}
+            ← BACK
+          </button>
+          <Breadcrumbs />
+        </div>
+      )}
       {props.children}
     </div>
   </OneSection>
