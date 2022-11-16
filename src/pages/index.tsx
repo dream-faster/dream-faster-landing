@@ -1,21 +1,13 @@
-import Link from 'next/link';
-
 import { Hero } from '@/components/Hero';
 import { MajorButton } from '@/components/MajorButton';
+import { MinorButton } from '@/components/MinorButton';
 import ProjectsSection from '@/components/ProjectsSection';
+import Seperator from '@/components/Seperator';
 import { Meta } from '@/layouts/Meta';
 import { getSortedPostsData } from '@/lib/projects';
 import { getSortedTopicsData } from '@/lib/topics';
 import { Main } from '@/templates/Main';
 import OneSection from '@/templates/OneSection';
-
-const MinorButton = ({ text, to }: { text: string; to: string }) => (
-  <Link href={to}>
-    <a className=" m-6 self-end justify-self-end border-none font-mono text-black no-underline hover:border-b-2 hover:border-b-yellow-400 hover:text-yellow-400">
-      {text} ➡
-    </a>
-  </Link>
-);
 
 export default function Index({
   allPostsData,
@@ -63,7 +55,7 @@ export default function Index({
         <ProjectsSection allPostsData={allTopicsData} baseUrl="topics" all />
         <MinorButton to="/topics" text="All Topics" />
       </OneSection>
-      <div className="h-28" />
+      <Seperator />
     </Main>
   );
 }
