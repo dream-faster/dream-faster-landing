@@ -23,7 +23,7 @@ export default function Index({
       }
     >
       <OneSection title="topics 👇">
-        <ProjectsSection allPostsData={allPostsData} baseUrl="topics" />
+        <ProjectsSection allPostsData={allPostsData} baseUrl="topics" all />
       </OneSection>
     </Main>
   );

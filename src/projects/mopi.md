@@ -4,6 +4,7 @@ date: "2022-09-10"
 github_link: "https://github.com/dream-faster/modular-pipelines"
 description: "“More models are better” - Create complex pipelines fast. Ensemble, stack multiple models, with support of multi-objective training."
 tag: "mltools"
+favorite: true
 ---
 
 # Modular Pipelines

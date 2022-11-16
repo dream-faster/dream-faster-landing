@@ -34,7 +34,7 @@ export const ProjectPage = ({ data, relatedData, relatedType }) => (
     </OneSection>
     {relatedData.length > 0 && (
       <OneSection title={`related ${relatedType} 👇`}>
-        <ProjectsSection allPostsData={relatedData} baseUrl={relatedType} />
+        <ProjectsSection allPostsData={relatedData} baseUrl={relatedType} all />
       </OneSection>
     )}
     <div className="h-14" />
