@@ -46,7 +46,7 @@ export const ProfileCard = ({
     <Avatar profile_url={profile_url} large={large} />
     <div className="flex flex-col">
       <p className="my-0 text-gray-700 dark:text-white">{name}</p>
-      <div className="flex w-full flex-row">
+      <div className="flex w-full flex-row flex-wrap">
         {urls.map((url, i) => (
           <div key={i} className="text-gray-500">
             {i !== 0 && '•'}

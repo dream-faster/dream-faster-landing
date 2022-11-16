@@ -88,14 +88,6 @@ const communityInfo = [
         name: 'linkedin',
         url: 'https://www.linkedin.com/in/fvanlitsenburg/',
       },
-      // {
-      //   name: 'github',
-      //   url: 'https://github.com/zoltanctoth',
-      // },
-      // {
-      //   name: 'blog',
-      //   url: 'https://almostintuitive.com/',
-      // },
     ],
   },
   {
@@ -104,16 +96,26 @@ const communityInfo = [
     urls: [
       {
         name: 'linkedin',
-        url: 'https://www.linkedin.com/in/fvanlitsenburg/',
-      },
-      {
-        name: 'github',
-        url: 'https://github.com/daralthus',
+        url: 'https://www.linkedin.com/in/peterkadlot/',
       },
       // {
-      //   name: 'blog',
-      //   url: 'https://almostintuitive.com/',
+      //   name: 'github',
+      //   url: 'https://github.com/daralthus',
       // },
+      {
+        name: 'twitter',
+        url: 'https://www.twitter.com/bonsaielectric/',
+      },
+    ],
+  },
+  {
+    name: 'Ricardo Ferretti',
+    profile: '/assets/images/ricardo_ferretti_profile.jpeg',
+    urls: [
+      {
+        name: 'linkedin',
+        url: 'https://www.linkedin.com/in/riccardoferretti/',
+      },
     ],
   },
   {
