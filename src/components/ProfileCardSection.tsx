@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { Avatar, ProfileCard } from './ProfileCard';
 
 const userInfo = [
@@ -41,58 +43,97 @@ const userInfo = [
 
 const communityInfo = [
   {
-    name: 'Joe Doe',
-    profile: '/assets/images/mark_profile.jpeg',
+    name: 'Charles Fried',
+    profile: '/assets/images/charles_fried_profile.jpg',
+    intro:
+      'Charles is currently building [Unsigned Research](https://unsigned-research.com/) with a simple goal to provide sustained and superior risk-adjusted returns, irrespective of the overall market direction, via systematic strategies.',
     urls: [
       {
         name: 'linkedin',
-        url: 'https://www.linkedin.com/in/markszulyovszky/',
+        url: 'https://www.linkedin.com/in/charles-fried',
       },
       {
-        name: 'github',
-        url: 'https://github.com/itchingpixels',
+        name: 'twitter',
+        url: 'https://twitter.com/iSeekLong',
       },
       {
-        name: 'blog',
-        url: 'https://almostintuitive.com/',
+        name: 'website',
+        url: 'https://www.charlesfried.com/',
       },
     ],
   },
   {
-    name: 'Joe Doe',
-    profile: '/assets/images/mark_profile.jpeg',
+    name: 'Zoltan C. Toth',
+    profile: '/assets/images/zoltan_toth_profile.jpeg',
     urls: [
       {
         name: 'linkedin',
-        url: 'https://www.linkedin.com/in/markszulyovszky/',
+        url: 'https://www.linkedin.com/in/zoltanctoth/',
       },
       {
         name: 'github',
-        url: 'https://github.com/itchingpixels',
+        url: 'https://github.com/zoltanctoth',
       },
-      {
-        name: 'blog',
-        url: 'https://almostintuitive.com/',
-      },
+      // {
+      //   name: 'blog',
+      //   url: 'https://almostintuitive.com/',
+      // },
     ],
   },
   {
-    name: 'Joe Doe',
-    profile: '/assets/images/mark_profile.jpeg',
+    name: 'Felix van Litsenburg',
+    profile: '/assets/images/felix_vanLitsenburg_profile.jpeg',
     urls: [
       {
         name: 'linkedin',
-        url: 'https://www.linkedin.com/in/markszulyovszky/',
+        url: 'https://www.linkedin.com/in/fvanlitsenburg/',
+      },
+      // {
+      //   name: 'github',
+      //   url: 'https://github.com/zoltanctoth',
+      // },
+      // {
+      //   name: 'blog',
+      //   url: 'https://almostintuitive.com/',
+      // },
+    ],
+  },
+  {
+    name: 'Peter Kadlot',
+    profile: '/assets/images/peter_kadlot_profile.jpeg',
+    urls: [
+      {
+        name: 'linkedin',
+        url: 'https://www.linkedin.com/in/fvanlitsenburg/',
       },
       {
         name: 'github',
-        url: 'https://github.com/itchingpixels',
+        url: 'https://github.com/daralthus',
       },
-      {
-        name: 'blog',
-        url: 'https://almostintuitive.com/',
-      },
+      // {
+      //   name: 'blog',
+      //   url: 'https://almostintuitive.com/',
+      // },
     ],
+  },
+  {
+    name: 'Check out all',
+    profile: '/assets/images/placeholder_profile.svg',
+    more: true,
+    urls: [],
+    //   {
+    //     name: 'linkedin',
+    //     url: 'https://www.linkedin.com/in/markszulyovszky/',
+    //   },
+    //   {
+    //     name: 'github',
+    //     url: 'https://github.com/itchingpixels',
+    //   },
+    //   {
+    //     name: 'blog',
+    //     url: 'https://almostintuitive.com/',
+    //   },
+    // ],
   },
 ];
 
@@ -113,25 +154,60 @@ export const ProfileCardSection = ({ large }: { large?: boolean }) => (
     ))}
   </div>
 );
+export const CommunityCardSection = ({ large }: { large?: boolean }) => (
+  <div
+    className={` flex h-full w-full flex-col flex-wrap items-start  ${
+      large ? 'justify-between' : 'justify-start'
+    } md:flex-row`}
+  >
+    {communityInfo.map(
+      (user, i) =>
+        !user.more && (
+          <ProfileCard
+            key={i}
+            name={user.name}
+            profile_url={user.profile}
+            urls={user.urls}
+            large={large}
+          />
+        )
+    )}
+  </div>
+);
 
-export const CommunityCardSection = () => (
+export const CommunityAvatarSection = () => (
   <div className="flex h-full flex-row items-start justify-start">
-    {communityInfo.map((user, i) => (
-      <a
-        target="_blank"
-        href=""
-        key={i}
-        className={`group z-0 m-0 flex-none  hover:z-30 ${
-          i === 0 ? 'ml-0' : '-ml-7'
-        }`}
-        rel="noreferrer"
-      >
-        <Avatar key={i} profile_url={user.profile} />
-        <p className="absolute hidden bg-white font-mono text-xs group-hover:block">
-          {user.name}
-        </p>
-      </a>
-    ))}
+    {communityInfo.map(
+      (user, i) =>
+        (i < 3 || user.more) && (
+          <Link
+            href={`${i + 1 === communityInfo.length ? '/about#community' : ''}`}
+            key={i}
+            className={`group z-0 m-0 flex-none  hover:z-30 ${
+              i === 0 ? 'ml-0' : '-ml-7'
+            } ${
+              i + 1 === communityInfo.length
+                ? 'cursor-pointer'
+                : 'cursor-default'
+            }`}
+          >
+            <div
+              className={`group z-0 m-0 flex-none  hover:z-30 ${
+                i === 0 ? 'ml-0' : '-ml-7'
+              } ${
+                i + 1 === communityInfo.length
+                  ? 'cursor-pointer'
+                  : 'cursor-default'
+              }`}
+            >
+              <Avatar key={i} profile_url={user.profile} />
+              <p className="absolute hidden bg-white font-mono text-xs group-hover:block">
+                {user.name}
+              </p>
+            </div>
+          </Link>
+        )
+    )}
     <p className="flex h-full items-center justify-center self-center pr-2 text-center font-mono text-xs text-gray-700 dark:text-white">
       Community
     </p>

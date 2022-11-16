@@ -1,5 +1,8 @@
 import { MajorButton } from './MajorButton';
-import { ProfileCardSection } from './ProfileCardSection';
+import {
+  CommunityAvatarSection,
+  ProfileCardSection,
+} from './ProfileCardSection';
 
 export const Hero = () => (
   <div className="flex h-full w-full flex-col justify-between md:min-h-[calc(100vh-16rem)]">
@@ -30,9 +33,9 @@ export const Hero = () => (
       </article>
     </div>
     <div>
-      <div className="mt-6 flex flex-col flex-wrap px-12 md:flex-row">
+      <div className="mt-6 flex flex-col px-12 md:flex-row">
         <ProfileCardSection />
-        {/* <CommunityCardSection /> */}
+        <CommunityAvatarSection />
       </div>
       <div className="-ml-2 px-12">
         <MajorButton text="Who we are" link="/about" />

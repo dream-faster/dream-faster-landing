@@ -1,5 +1,8 @@
 import { MajorButton } from '@/components/MajorButton';
-import { ProfileCardSection } from '@/components/ProfileCardSection';
+import {
+  CommunityCardSection,
+  ProfileCardSection,
+} from '@/components/ProfileCardSection';
 import { Meta } from '@/layouts/Meta';
 import { Article } from '@/templates/Article';
 import { Main } from '@/templates/Main';
@@ -39,7 +42,7 @@ const About = () => (
             <ProfileCardSection large />
           </div>
           <br />
-          <h2> Community </h2>
+          <h2 id="community"> Community </h2>
           Since 2021 we have been developing a community of likeminded
           individuals, who we meet weekly for: Project Demonstrations and Deep
           Dives Mini-lectures on computational topics, eg.: Caustics Paper
@@ -47,6 +50,9 @@ const About = () => (
           community then DM us on @hellosemy or @itchingpixels to join the
           family.
           <br />
+          <div className="mt-6 flex  w-full flex-col flex-wrap md:flex-row">
+            <CommunityCardSection large />
+          </div>
           <br />
           Become part of the journey in experimenting with a new way of
           organising technological spin-offs. We write deep insights into what
