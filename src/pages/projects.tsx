@@ -1,4 +1,6 @@
+import BreadcrumbSection from '@/components/BreadcrumbSection';
 import ProjectsSection from '@/components/ProjectsSection';
+import Seperator from '@/components/Seperator';
 import { Meta } from '@/layouts/Meta';
 import { getSortedPostsData } from '@/lib/projects';
 import { Main } from '@/templates/Main';
@@ -23,8 +25,12 @@ export default function Index({
       }
     >
       <OneSection title="projects 👇">
-        <ProjectsSection allPostsData={allPostsData} baseUrl="projects" />
+        <div className="w-full px-12">
+          <BreadcrumbSection />
+        </div>
+        <ProjectsSection allPostsData={allPostsData} baseUrl="projects" all />
       </OneSection>
+      <Seperator />
     </Main>
   );
 }
