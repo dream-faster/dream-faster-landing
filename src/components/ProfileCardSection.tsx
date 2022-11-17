@@ -88,6 +88,10 @@ const communityInfo = [
         name: 'linkedin',
         url: 'https://www.linkedin.com/in/fvanlitsenburg/',
       },
+      {
+        name: 'website',
+        url: 'https://www.wetzoek.nl',
+      },
     ],
   },
   {
@@ -115,6 +119,10 @@ const communityInfo = [
       {
         name: 'linkedin',
         url: 'https://www.linkedin.com/in/riccardoferretti/',
+      },
+      {
+        name: 'github',
+        url: 'https://github.com/riccardoferretti',
       },
     ],
   },
